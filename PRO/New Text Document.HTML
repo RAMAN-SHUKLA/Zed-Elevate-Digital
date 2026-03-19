@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZedElevate Digital | Creative Agency</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --neon-blue: #00f3ff;
+            --neon-purple: #bc13fe;
+            --ghost-dark: #0a0b10;
+            --card-bg: #161b22;
+        }
+
+        body {
+            background-color: var(--ghost-dark);
+            color: #ffffff;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        .neon-text { color: var(--neon-blue); text-shadow: 0 0 10px var(--neon-blue); }
+        .section-padding { padding: 100px 0; }
+        
+        /* Navbar */
+        .navbar { 
+            background: rgba(10, 11, 16, 0.98) !important; 
+            border-bottom: 1px solid rgba(0, 243, 255, 0.1); 
+            backdrop-filter: blur(10px);
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(10, 11, 16, 0.85), rgba(10, 11, 16, 0.85)), 
+                        url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1920');
+            background-size: cover;
+            display: flex; align-items: center; text-align: center;
+        }
+
+        /* Custom Cards */
+        .custom-card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid rgba(188, 19, 254, 0.2);
+            transition: 0.4s;
+            height: 100%;
+        }
+        .custom-card:hover {
+            border-color: var(--neon-blue);
+            transform: translateY(-10px);
+            box-shadow: 0 0 20px rgba(0, 243, 255, 0.2);
+        }
+
+        .btn-neon {
+            border: 2px solid var(--neon-blue);
+            color: var(--neon-blue);
+            font-weight: bold;
+            transition: 0.4s;
+            background: transparent;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .btn-neon:hover { background: var(--neon-blue); color: #000; box-shadow: 0 0 20px var(--neon-blue); }
+
+        /* Premium Contact Box */
+        .contact-box {
+            background: linear-gradient(145deg, #11141d, #050608);
+            border-radius: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 20px 20px 60px #040507, -20px -20px 60px #101119;
+            padding: 50px;
+        }
+
+        .form-control {
+            background: rgba(255, 255, 255, 0.05) !important;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: white !important;
+            padding: 12px 20px;
+            border-radius: 10px;
+        }
+        .form-control:focus { border-color: var(--neon-blue); box-shadow: 0 0 10px rgba(0, 243, 255, 0.2); }
+
+        .contact-info-item { margin-bottom: 25px; display: flex; align-items: center; }
+        .contact-info-item i {
+            width: 50px; height: 50px;
+            background: rgba(0, 243, 255, 0.1);
+            display: flex; align-items: center; justify-content: center;
+            border-radius: 50%; margin-right: 15px;
+            color: var(--neon-blue); font-size: 1.5rem;
+        }
+        /* Logo styling */
+.navbar-brand img {
+    height: 45px; /* Aap apne logo ke hisab se height adjust kar sakte hain */
+    width: auto;
+}
+
+/* About Image Neon Effect */
+.about-img-container {
+    position: relative;
+    border: 2px solid var(--neon-blue);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 20px var(--neon-blue), inset 0 0 10px var(--neon-blue);
+}
+
+.about-img-container img {
+    transition: transform 0.5s ease;
+    display: block;
+}
+
+.about-img-container:hover img {
+    transform: scale(1.05);
+}
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-3 neon-text" href="#">
+              <img src="YOUR_LOGO_URL_HERE.png" alt="ZedElevate Logo"> 
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto fw-medium">
+                    <li class="nav-item"><a class="nav-link px-3" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#portfolio">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#blog">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#contact">Contact</a></li>
+                </ul>
+                <a href="#contact" class="btn btn-neon ms-lg-3">Free Audit</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="container" data-aos="zoom-in">
+            <h1 class="display-2 fw-bold mb-3">Creative Designs. <span class="neon-text">Powerful Videos.</span> Real Growth.</h1>
+            <p class="lead mb-5 opacity-75">ZedElevate Digital specializes in high-impact graphic designing and professional video editing that helps brands stand out and grow online.</p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="#portfolio" class="btn btn-neon btn-lg px-4">View Our Work</a>
+                <a href="#contact" class="btn btn-outline-light btn-lg px-4" style="border-radius: 0;">Book Consultation</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section-padding">
+    <div class="container" data-aos="fade-up">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-5">
+                <div class="about-img-container">
+                    <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=800" class="img-fluid" alt="About ZedElevate">
+                </div>
+            </div>
+
+            <div class="col-lg-7">
+                <h2 class="neon-text display-5 fw-bold mb-4">About ZedElevate Digital</h2>
+                <p class="fs-5 opacity-75">
+                    ZedElevate Digital is a creative-first digital agency focused on graphic designing and professional video editing. 
+                    We help brands communicate visually with powerful designs, engaging reels, ads, and marketing content that drive attention and results.
+                </p>
+                <div class="mt-4">
+                    <h4 class="text-white fw-bold italic">"Make Your Brand Unforgettable."</h4>
+                </div>
+                <div class="mt-4">
+                    <a href="#contact" class="btn btn-neon px-4">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section id="services" class="section-padding bg-black bg-opacity-25">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="neon-text display-5 fw-bold">Our Core Services</h2>
+            <p class="fs-5 opacity-50">Hamari expert digital solutions aapke brand ki growth ke liye.</p>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-md-4" data-aos="fade-up">
+                <div class="custom-card">
+                    <i class="bi bi-instagram fs-1 neon-text"></i>
+                    <h4 class="mt-3">Social Media Management</h4>
+                    <ul class="list-unstyled small opacity-75 mt-3">
+                        <li>• Instagram & Facebook Handling </li>
+                        <li>• Content Calendar & Strategy </li>
+                        <li>• Caption & Hashtag Research </li>
+                        <li>• Community Management </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="custom-card">
+                    <i class="bi bi-palette fs-1 neon-text"></i>
+                    <h4 class="mt-3">Graphic Designing</h4>
+                    <ul class="list-unstyled small opacity-75 mt-3">
+                        <li>• Logo & Brand Identity Kit </li>
+                        <li>• Posters, Banners & Brochures </li>
+                        <li>• Social Media Creatives [</li>
+                        <li>• Packaging & Menu Design </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="custom-card">
+                    <i class="bi bi-camera-reels fs-1 neon-text"></i>
+                    <h4 class="mt-3">Video Editing</h4>
+                    <ul class="list-unstyled small opacity-75 mt-3">
+                        <li>• Professional Reels Editing </li>
+                        <li>• YouTube Video Editing </li>
+                        <li>• Motion Graphics & Promos </li>
+                        <li>• Event Highlights </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-4" data-aos="fade-up">
+                <div class="custom-card">
+                    <i class="bi bi-graph-up-arrow fs-1 neon-text"></i>
+                    <h4 class="mt-3">Paid Ads Management</h4>
+                    <ul class="list-unstyled small opacity-75 mt-3">
+                        <li>• Facebook & Instagram Ads ]</li>
+                        <li>• Google & YouTube Ads </li>
+                        <li>• Lead Generation Campaigns </li>
+                        <li>• E-commerce Sales Ads </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="custom-card">
+                    <i class="bi bi-laptop fs-1 neon-text"></i>
+                    <h4 class="mt-3">Website Services</h4>
+                    <ul class="list-unstyled small opacity-75 mt-3">
+                        <li>• WordPress & Shopify Websites ]</li>
+                        <li>• Conversion Landing Pages </li>
+                        <li>• Full SEO (On-Page & Off-Page) </li>
+                        <li>• Local SEO & GMB Optimization </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="custom-card">
+                    <i class="bi bi-megaphone fs-1 neon-text"></i>
+                    <h4 class="mt-3">Advanced Marketing</h4>
+                    <ul class="list-unstyled small opacity-75 mt-3">
+                        <li>• Influencer Marketing </li>
+                        <li>• Email Marketing & Funnels ]</li>
+                        <li>• Content & Script Writing</li>
+                        <li>• Reputation Management (ORM) </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-12">
+                <div class="p-4 border border-info rounded-4 bg-dark bg-opacity-50 text-center">
+                    <h4 class="neon-text mb-3">Available Packages </h4>
+                    <div class="d-flex flex-wrap justify-content-center gap-4">
+                        <span class="badge border border-info p-2">Basic: 8 Posts + 4 Reels </span>
+                        <span class="badge border border-info p-2">Standard: 12 Posts + 8 Reels + Ads </span>
+                        <span class="badge border border-info p-2">Premium: Full Branding + Website + Ads </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section id="portfolio" class="section-padding">
+        <div class="container">
+            <h2 class="text-center mb-4 neon-text display-5 fw-bold">Our Creative Work</h2>
+            <p class="text-center mb-5 opacity-75">Explore our latest graphic designs and video editing projects that helped brands enhance their digital presence.</p>
+            
+            <div class="bg-dark p-5 rounded-4 border border-info text-center mb-5 shadow-lg" data-aos="flip-up">
+                <i class="bi bi-quote fs-1 neon-text"></i>
+                <p class="fst-italic fs-4 text-white-50">"ZedElevate Digital transformed our social media with stunning designs and engaging reels. Highly professional work."</p>
+                <p class="fw-bold neon-text">- Happy Client</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="blog" class="section-padding bg-black bg-opacity-25">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <h2 class="neon-text display-5 fw-bold">Creative & Marketing Insights</h2>
+                <p class="opacity-75">Tips, trends, and strategies for your brand's growth.</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up">
+                    <div class="custom-card">
+                        <h5 class="neon-text">AI in Design</h5>
+                        <p class="small opacity-50 mt-3">How AI is changing the landscape of video editing and graphic design in 2026.</p>
+                        <a href="#" class="btn btn-sm btn-neon mt-2">Read More</a>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="custom-card">
+                        <h5 class="neon-text">Reels Engagement</h5>
+                        <p class="small opacity-50 mt-3">Mastering the 3-second hook to keep your audience watching till the end.</p>
+                        <a href="#" class="btn btn-sm btn-neon mt-2">Read More</a>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="custom-card">
+                        <h5 class="neon-text">Brand Storytelling</h5>
+                        <p class="small opacity-50 mt-3">Building an unforgettable brand identity that connects with your customers.</p>
+                        <a href="#" class="btn btn-sm btn-neon mt-2">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section-padding">
+        <div class="container">
+            <div class="contact-box" data-aos="fade-up">
+                <div class="row g-5">
+                    <div class="col-lg-5">
+                        <h2 class="display-5 fw-bold neon-text mb-4">Let's Connect</h2>
+                        <p class="fs-5 opacity-75 mb-5">Have a project in mind? Let's bring your ideas to life with creative visuals.</p>
+                        
+                        <div class="contact-info-item">
+                            <i class="bi bi-envelope-at"></i>
+                            <div>
+                                <h6 class="mb-0 text-white opacity-50">Email Us</h6>
+                                <p class="mb-0 fw-bold">hello@zedelevate.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <i class="bi bi-telephone"></i>
+                            <div>
+                                <h6 class="mb-0 text-white opacity-50">Call Us</h6>
+                                <p class="mb-0 fw-bold">+91 6387235395</p>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-5 p-4 border border-info rounded-3 bg-dark">
+                            <h5 class="text-info">Free Social Media Audit</h5>
+                            <p class="small opacity-75">Get a quick review of your profile and discover how to improve your growth.</p>
+                            <button class="btn btn-sm btn-neon">Claim Free Audit</button>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-7">
+                        <div class="p-4 bg-dark bg-opacity-50 rounded-4">
+                            <h4 class="mb-4 text-white">Book a Creative Consultation</h4>
+                            <p class="small opacity-50 mb-4">Schedule a call to discuss your design, video, or marketing requirements.</p>
+                            <form>
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control" placeholder="Full Name">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="email" class="form-control" placeholder="Email Address">
+                                    </div>
+                                    <div class="col-12">
+                                        <textarea class="form-control" rows="5" placeholder="Your project details..."></textarea>
+                                    </div>
+                                    <div class="col-12">
+                                        <button type="submit" class="btn btn-neon w-100">Schedule Call Now</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-4 text-center border-top border-secondary border-opacity-25">
+        <p class="mb-0 opacity-50 small">&copy; 2026 ZedElevate Digital. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script> AOS.init({ duration: 1000, once: true }); </script>
+</body>
+</html>

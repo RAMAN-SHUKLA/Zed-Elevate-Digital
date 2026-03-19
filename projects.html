@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Projects | Zed Elevate Digital</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <style>
+        .project-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+            aspect-ratio: 16/9;
+            margin-bottom: 30px;
+            cursor: pointer;
+            border: 1px solid rgba(0, 243, 255, 0.1);
+        }
+        .project-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.2, 0, 0.2, 1);
+        }
+        .project-overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(to top, rgba(10, 11, 16, 0.95), transparent);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 40px;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        .project-card:hover .project-img { transform: scale(1.1); }
+        .project-card:hover .project-overlay { opacity: 1; }
+        
+        .project-category {
+            color: var(--neon-blue);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            transform: translateY(20px);
+            transition: transform 0.4s ease;
+        }
+        .project-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            transform: translateY(20px);
+            transition: transform 0.4s ease 0.1s;
+        }
+        .project-card:hover .project-category,
+        .project-card:hover .project-title { transform: translateY(0); }
+        
+        .filter-btn {
+            background: transparent;
+            border: none;
+            color: rgba(255,255,255,0.6);
+            padding: 10px 25px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: 0.3s;
+            position: relative;
+        }
+        .filter-btn.active { color: var(--neon-blue); }
+        .filter-btn.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 25%; width: 50%; height: 2px;
+            background: var(--neon-blue);
+            box-shadow: 0 0 10px var(--neon-blue);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="LOGO.png" alt="Zed Elevate Logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="projects.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact</a></li>
+                    <li class="nav-item d-none d-lg-block">
+                        <a href="https://calendly.com/ramanshukla2005/30min" class="nav-btn-pill btn-portfolio-outline">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://calendly.com/ramanshukla2005/30min" class="nav-btn-pill btn-book-meeting">Book a Meeting</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="section-padding text-center" style="background: radial-gradient(circle at center, rgba(0, 243, 255, 0.05) 0%, transparent 70%);">
+        <div class="container" data-aos="fade-up">
+            <h1 class="display-3 fw-bold mb-4">Our <span class="neon-text">Projects</span></h1>
+            <p class="lead opacity-75 mx-auto mb-5" style="max-width: 800px;">A showcase of our recent digital transformations, from high-converting campaigns to premium brand identities.</p>
+            
+            <div class="d-flex flex-wrap justify-content-center gap-3 mb-5">
+                <button class="filter-btn active" onclick="filterProjects('all')">All Works</button>
+                <button class="filter-btn" onclick="filterProjects('branding')">Branding</button>
+                <button class="filter-btn" onclick="filterProjects('marketing')">Marketing</button>
+                <button class="filter-btn" onclick="filterProjects('web')">Web Dev</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="pb-5">
+        <div class="container">
+            <div class="row g-4" id="projectsContainer">
+                <!-- Projects will be loaded here dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black">
+        <div class="container">
+            <div class="row g-4 mb-5">
+                <div class="col-lg-4">
+                    <img src="LOGO.png" alt="Logo" height="50" class="mb-4">
+                    <p class="small opacity-50">Elevating brands through strategic design and digital marketing excellence.</p>
+                </div>
+                <div class="col-lg-2">
+                    <h5 class="mb-4">Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h5 class="mb-4">Expertise</h5>
+                    <ul class="footer-links">
+                        <li><a href="social-media.html">Social Media</a></li>
+                        <li><a href="brandingC.html">Branding</a></li>
+                        <li><a href="website-seo.html">SEO</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 text-lg-end">
+                    <h5 class="mb-4">Connect</h5>
+                    <div class="d-flex gap-3 fs-4 justify-content-lg-end">
+                        <a href="#" class="neon-text"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="neon-text"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center pt-4 border-top border-secondary border-opacity-25">
+                <p class="mb-0 opacity-50 small">&copy; 2026 Zed Elevate Digital. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script> AOS.init({ duration: 1000, once: true }); </script>
+
+    <script>
+        const projectsContainer = document.getElementById('projectsContainer');
+
+        const DEFAULT_PROJECTS = [
+            { id: 1, title: "Banarasi Saree House", category: "branding", image: "https://images.unsplash.com/photo-a-woman-in-a-yellow-and-red-sari-standing-next-to-another-woman-in-a-jIsBR0PrCSY?w=1200&h=800&fit=crop", link: "case-studies/banarasi-saree-house.html" },
+            { id: 2, title: "Rajasthan Heritage Tours", category: "branding", image: "https://images.unsplash.com/photo-1596394636738-8a6385be0e2d?w=1200&h=800&fit=crop", link: "case-studies/rajasthan-heritage.html" },
+            { id: 3, title: "Mumbai Street Food Hub", category: "web", image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=1200&h=800&fit=crop", link: "case-studies/mumbai-street-food.html" },
+            { id: 4, title: "Kerala Ayurveda Center", category: "web", image: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=1200&h=800&fit=crop", link: "case-studies/kerala-ayurveda.html" },
+            { id: 5, title: "Diwali Festive Campaign", category: "marketing", image: "https://images.unsplash.com/photo-16087889894928-5a9c9b5c2b8?w=1200&h=800&fit=crop", link: "case-studies/diwali-campaign.html" },
+            { id: 6, title: "Wedding Season Marketing", category: "marketing", image: "https://images.unsplash.com/photo-1511795406837-7a9c73e5b2f5?w=1200&h=800&fit=crop", link: "case-studies/wedding-marketing.html" }
+        ];
+
+        function loadProjects() {
+            // Only seed defaults if storage is empty — don't wipe admin-added projects
+            const stored = localStorage.getItem('zed_projects');
+            if (!stored) {
+                localStorage.setItem('zed_projects', JSON.stringify(DEFAULT_PROJECTS));
+            }
+            const projects = JSON.parse(localStorage.getItem('zed_projects'));
+            renderProjects(projects);
+        }
+
+        function renderProjects(projectsToRender) {
+            projectsContainer.innerHTML = '';
+
+            if (!projectsToRender || projectsToRender.length === 0) {
+                projectsContainer.innerHTML = '<div class="col-12 text-center py-5"><p class="text-white">No projects found in this category.</p></div>';
+                return;
+            }
+
+            projectsToRender.forEach(p => {
+                const html = `
+                    <div class="col-lg-6 project-item" data-category="${p.category}" data-aos="fade-up">
+                        <a href="${p.link}" target="_blank" class="text-decoration-none">
+                            <div class="project-card">
+                                <img src="${p.image}" class="project-img" alt="${p.title}">
+                                <div class="project-overlay">
+                                    <span class="project-category">${p.category}</span>
+                                    <h3 class="project-title text-white">${p.title}</h3>
+                                    <div class="neon-text">View Case Study <i class="bi bi-arrow-right"></i></div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                `;
+                projectsContainer.insertAdjacentHTML('beforeend', html);
+            });
+
+            // Re-init AOS for newly added elements
+            if (typeof AOS !== 'undefined') AOS.refresh();
+        }
+
+        function filterProjects(category) {
+            const btns = document.querySelectorAll('.filter-btn');
+            btns.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            const allProjects = JSON.parse(localStorage.getItem('zed_projects')) || [];
+
+            if (category === 'all') {
+                renderProjects(allProjects);
+            } else {
+                renderProjects(allProjects.filter(p => p.category === category));
+            }
+        }
+
+        // Load projects when DOM is ready
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM loaded, loading projects...');
+            loadProjects();
+        });
+        
+        // Listen for updates from other tabs (admin panel)
+        window.addEventListener('storage', () => {
+            loadProjects();
+        });
+    </script>
+</body>
+</html>

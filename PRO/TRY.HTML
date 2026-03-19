@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZedElevate Digital | Creative Agency</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --neon-blue: #00f3ff;
+            --neon-purple: #bc13fe;
+            --ghost-dark: #0a0b10;
+            --card-bg: #161b22;
+        }
+
+        body {
+            background-color: var(--ghost-dark);
+            color: #ffffff;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        .neon-text { color: var(--neon-blue); text-shadow: 0 0 10px var(--neon-blue); }
+        .section-padding { padding: 100px 0; }
+        
+        /* --- FIXED NAVBAR WITH OVERFLOWING LARGE LOGO --- */
+        .navbar { 
+            background: rgba(10, 11, 16, 0.98) !important; 
+            border-bottom: 1px solid rgba(0, 243, 255, 0.1); 
+            backdrop-filter: blur(10px);
+            height: 80px; /* Navbar ka size fix rakha hai */
+            padding: 0 !important;
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar-brand {
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Logo ko aur bada aur chauda karne ki settings */
+        .navbar-brand img { 
+            height: auto; 
+            width: 450px; /* Width ko 375px se badha kar 450px kar diya */
+            max-height: 160px; /* Navbar se bada hone diya taaki overflow kare */
+            margin-top: 10px; /* Logo ko thoda adjust karne ke liye */
+            margin-bottom: -15px; 
+            filter: drop-shadow(0 0 5px rgba(0, 243, 255, 0.2));
+            transition: 0.4s ease-in-out;
+            object-fit: contain;
+        }
+        
+        .navbar-brand:hover img { 
+            filter: drop-shadow(0 0 20px var(--neon-blue));
+            transform: scale(1.02);
+        }
+
+        .navbar-nav {
+            height: 80px;
+            align-items: center; /* Links hamesha center mein rahenge */
+        }
+
+        /* Mobile specific logo size */
+        @media (max-width: 991px) {
+            .navbar-brand img {
+                width: 280px;
+                max-height: 100px;
+                margin-top: 5px;
+            }
+            .navbar { height: auto; padding: 10px 0 !important; }
+        }
+
+        /* --- CONTENT STYLES --- */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(10, 11, 16, 0.85), rgba(10, 11, 16, 0.85)), 
+                        url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1920');
+            background-size: cover;
+            display: flex; align-items: center; text-align: center;
+        }
+
+        .about-img-container {
+            position: relative;
+            border: 2px solid var(--neon-blue);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 0 20px var(--neon-blue);
+        }
+        .about-img-container img { transition: 0.5s; display: block; width: 100%; }
+
+        .service-nav-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 15px;
+            text-align: center;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: 0.3s;
+        }
+        .service-nav-card img { width: 50px; height: 50px; border-radius: 10px; margin-bottom: 8px; filter: grayscale(100%); }
+        .nav-link.active .service-nav-card { border-color: var(--neon-blue); box-shadow: 0 0 20px rgba(0, 243, 255, 0.2); }
+        .nav-link.active .service-nav-card img { filter: grayscale(0%); }
+
+        .service-detail-box { background: linear-gradient(145deg, #11141d, #050608); border-radius: 30px; border: 1px solid rgba(255, 255, 255, 0.05); padding: 40px; }
+        .service-main-img { width: 100%; border-radius: 20px; border: 1px solid var(--neon-purple); box-shadow: 0 0 30px rgba(188, 19, 254, 0.2); }
+
+        .btn-neon { border: 2px solid var(--neon-blue); color: var(--neon-blue); font-weight: bold; transition: 0.4s; background: transparent; text-transform: uppercase; border-radius: 8px; }
+        .btn-neon:hover { background: var(--neon-blue); color: #000; box-shadow: 0 0 20px var(--neon-blue); }
+
+        .neon-icon-circle {
+            width: 60px; height: 60px; background: rgba(0, 243, 255, 0.1); border: 1px solid var(--neon-blue); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: var(--neon-blue); font-size: 1.5rem;
+        }
+        .contact-box { background: linear-gradient(145deg, #11141d, #050608); border-radius: 30px; border: 1px solid rgba(255, 255, 255, 0.05); padding: 50px; }
+        .form-control { background: rgba(255, 255, 255, 0.03) !important; border: 1px solid rgba(255, 255, 255, 0.1); color: white !important; padding: 12px 20px; border-radius: 10px; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="LOGO.png" alt="ZedElevate Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto fw-medium">
+                    <li class="nav-item"><a class="nav-link px-3" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#portfolio">Portfolio</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#blog">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link px-3" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="container" data-aos="zoom-in">
+            <h1 class="display-2 fw-bold mb-3">Creative Designs. <span class="neon-text">Powerful Videos.</span></h1>
+            <p class="lead mb-5 opacity-75">ZedElevate Digital specializes in high-impact graphic designing and professional video editing.</p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="#portfolio" class="btn btn-neon btn-lg px-4">View Our Work</a>
+                <a href="#contact" class="btn btn-outline-light btn-lg px-4">Book Consultation</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section-padding">
+        <div class="container" data-aos="fade-up">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-5">
+                    <div class="about-img-container">
+                        <img src="https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=800" alt="About">
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <h2 class="neon-text display-5 fw-bold mb-4">About ZedElevate Digital</h2>
+                    <p class="fs-5 opacity-75">
+                        ZedElevate Digital is a modern digital agency dedicated to helping businesses grow online. 
+                        We specialize in strategic branding, digital marketing, and web solutions that drive real results. 
+                        Our mission is to elevate brands through smart execution, creative thinking, and measurable growth.
+                    </p>
+                    <h4 class="mt-4 text-white fw-bold italic">"Transforming Ideas into Digital Impact."</h4>
+                    <div class="mt-4"><a href="#contact" class="btn btn-neon px-5 py-2">Learn More</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="section-padding bg-black bg-opacity-25">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="neon-text display-5 fw-bold">Our Core Services</h2>
+                <p class="fs-5 opacity-50">Expert solutions tailored for your growth.</p>
+            </div>
+
+            <ul class="nav nav-pills row g-3 justify-content-center mb-5" id="pills-tab" role="tablist">
+                <li class="nav-item col-6 col-md-4"><button class="nav-link active w-100 p-0 border-0 bg-transparent" data-bs-toggle="pill" data-bs-target="#tab-smm"><div class="service-nav-card"><img src="https://cdn-icons-png.flaticon.com/512/3955/3955024.png" alt=""><span class="fw-bold text-white small">Social Media</span></div></button></li>
+                <li class="nav-item col-6 col-md-4"><button class="nav-link w-100 p-0 border-0 bg-transparent" data-bs-toggle="pill" data-bs-target="#tab-design"><div class="service-nav-card"><img src="https://cdn-icons-png.flaticon.com/512/2970/2970785.png" alt=""><span class="fw-bold text-white small">Designing</span></div></button></li>
+                <li class="nav-item col-6 col-md-4"><button class="nav-link w-100 p-0 border-0 bg-transparent" data-bs-toggle="pill" data-bs-target="#tab-video"><div class="service-nav-card"><img src="https://cdn-icons-png.flaticon.com/512/3074/3074767.png" alt=""><span class="fw-bold text-white small">Video Editing</span></div></button></li>
+                <li class="nav-item col-6 col-md-4"><button class="nav-link w-100 p-0 border-0 bg-transparent" data-bs-toggle="pill" data-bs-target="#tab-ads"><div class="service-nav-card"><img src="https://cdn-icons-png.flaticon.com/512/1998/1998087.png" alt=""><span class="fw-bold text-white small">Paid Ads</span></div></button></li>
+                <li class="nav-item col-6 col-md-4"><button class="nav-link w-100 p-0 border-0 bg-transparent" data-bs-toggle="pill" data-bs-target="#tab-web"><div class="service-nav-card"><img src="https://cdn-icons-png.flaticon.com/512/1055/1055666.png" alt=""><span class="fw-bold text-white small">Website/SEO</span></div></button></li>
+                <li class="nav-item col-6 col-md-4"><button class="nav-link w-100 p-0 border-0 bg-transparent" data-bs-toggle="pill" data-bs-target="#tab-branding"><div class="service-nav-card"><img src="https://cdn-icons-png.flaticon.com/512/4844/4844490.png" alt=""><span class="fw-bold text-white small">Branding</span></div></button></li>
+            </ul>
+
+            <div class="tab-content">
+                <div class="tab-pane fade show active" id="tab-smm">
+                    <div class="service-detail-box">
+                        <div class="row align-items-center g-4">
+                            <div class="col-md-7">
+                                <h3 class="neon-text mb-4">Social Media Management</h3>
+                                <ul class="list-unstyled fs-5 opacity-75">
+                                    <li>• Instagram & Facebook handling</li>
+                                    <li>• Content calendar & strategy</li>
+                                    <li>• Post designing & Caption writing</li>
+                                    <li>• Hashtag research & Strategy</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-5"><img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=600" class="service-main-img" alt=""></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section-padding">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-5" data-aos="fade-right">
+                    <h1 class="display-3 fw-bold neon-text mb-4" style="letter-spacing: -1px;">Let's Connect</h1>
+                    <div class="d-flex align-items-center mb-4"><div class="neon-icon-circle me-3"><i class="bi bi-envelope-at-fill"></i></div><div><p class="mb-0 small opacity-50">Email Us</p><p class="mb-0 fw-bold fs-5">hello@zedelevate.com</p></div></div>
+                    <div class="d-flex align-items-center mb-5"><div class="neon-icon-circle me-3"><i class="bi bi-telephone-fill"></i></div><div><p class="mb-0 small opacity-50">Call Us</p><p class="mb-0 fw-bold fs-5">+91 6387235395</p></div></div>
+                </div>
+                <div class="col-lg-7" data-aos="fade-left">
+                    <div class="contact-box p-5">
+                        <h3 class="fw-bold mb-3 text-white">Book a Creative Consultation</h3>
+                        <form><div class="row g-3"><div class="col-md-6"><input type="text" class="form-control py-3" placeholder="Full Name"></div><div class="col-md-6"><input type="email" class="form-control py-3" placeholder="Email Address"></div><div class="col-12"><textarea class="form-control py-3" rows="5" placeholder="Your project details..."></textarea></div><div class="col-12 mt-4"><button type="submit" class="btn btn-neon w-100 py-3 fw-bold">SCHEDULE CALL NOW</button></div></div></form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-4 text-center border-top border-secondary border-opacity-25">
+        <p class="mb-0 opacity-50 small">&copy; 2026 ZedElevate Digital. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script> AOS.init({ duration: 1000, once: true }); </script>
+</body>
+</html>

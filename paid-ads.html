@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paid Ads Mastery | Zed Elevate Digital</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <style>
+        :root {
+            --neon-blue: #00f2fe;
+            --bg-dark: #05070a;
+            --card-bg: #0d1117;
+            --text-gray: #b0b0b0;
+            --white: #ffffff;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--white);
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            line-height: 1.8;
+        }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+        /* --- Hero Section --- */
+        .page-header {
+            padding: 160px 0 80px;
+            text-align: center;
+            background: radial-gradient(circle at top, rgba(0, 242, 254, 0.1) 0%, transparent 70%);
+        }
+
+        .page-header h1 { 
+            font-size: clamp(2.5rem, 8vw, 4.5rem); 
+            text-transform: uppercase; 
+            margin: 0; 
+            font-weight: 900;
+        }
+        .highlight { 
+            color: var(--neon-blue); 
+            text-shadow: 0 0 20px rgba(0, 242, 254, 0.6); 
+        }
+
+        /* --- Main Expertise Grid --- */
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            padding: 80px 0;
+        }
+
+        .image-side { position: relative; }
+        .image-side img {
+            width: 100%;
+            border-radius: 30px;
+            border: 1px solid rgba(0, 242, 254, 0.3);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+        }
+
+        /* ROI Floating Box */
+        .roi-stats {
+            position: absolute;
+            bottom: -20px;
+            left: -20px;
+            background: var(--card-bg);
+            border: 2px solid var(--neon-blue);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 30px rgba(0, 242, 254, 0.2);
+        }
+        .roi-stats h4 { color: var(--neon-blue); margin: 0; font-size: 1.5rem; }
+        .roi-stats p { margin: 0; font-size: 0.8rem; color: #fff; }
+
+        .text-side h2 { font-size: 2.8rem; margin-bottom: 25px; line-height: 1.2; }
+        .text-side p { color: var(--text-gray); font-size: 1.1rem; margin-bottom: 35px; }
+
+        /* --- Services List --- */
+        .services-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        .s-item {
+            background: var(--card-bg);
+            padding: 15px;
+            border-radius: 12px;
+            border-left: 3px solid var(--neon-blue);
+            font-size: 0.95rem;
+        }
+
+        /* --- How We Work (3 Steps) --- */
+        .work-process {
+            padding: 100px 0;
+            text-align: center;
+        }
+        .process-grid {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            margin-top: 60px;
+        }
+        .p-card {
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 20px;
+            flex: 1;
+            border: 1px solid #1a1f26;
+        }
+        .p-card .step { font-size: 3rem; font-weight: 900; opacity: 0.1; display: block; margin-bottom: -30px; }
+        .p-card h4 { color: var(--neon-blue); font-size: 1.4rem; margin-bottom: 15px; }
+
+        .back-home {
+            display: inline-block;
+            margin: 60px 0 100px;
+            padding: 18px 50px;
+            border: 2px solid var(--neon-blue);
+            color: var(--neon-blue);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            transition: 0.5s;
+        }
+        .back-home:hover {
+            background: var(--neon-blue);
+            color: #000;
+            box-shadow: 0 0 30px var(--neon-blue);
+        }
+
+        @media (max-width: 900px) {
+            .expertise-grid, .process-grid { grid-template-columns: 1fr; flex-direction: column; }
+            .services-list { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html"><img src="LOGO.png" alt="Zed Elevate Logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item">
+                        <a href="https://calendly.com/ramanshukla2005/30min" class="nav-btn-pill btn-book-meeting">Book a Meeting</a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <div class="theme-switch-wrapper">
+                            <label class="theme-switch" for="checkbox">
+                                <input type="checkbox" id="checkbox" />
+                                <div class="slider">
+                                    <i class="bi bi-moon-stars-fill"></i>
+                                    <i class="bi bi-sun-fill"></i>
+                                </div>
+                            </label>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header class="page-header">
+            <h1>MAXIMUM <span class="highlight">ROI</span></h1>
+            <p style="color: var(--text-gray); letter-spacing: 4px;">DATA-DRIVEN AD CAMPAIGNS</p>
+        </header>
+
+        <section class="expertise-grid">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <div class="image-side">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop" alt="Paid Ads Performance" class="img-fluid rounded-4">
+                        <div class="roi-stats">
+                            <h4>350% +</h4>
+                            <p>Average ROI Boost</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="text-side">
+                        <h2>Performance <span class="highlight">Marketing</span></h2>
+                        <p>We execute performance-driven campaigns that deliver measurable results. We don't just run ads; we design strategic sales funnels to ensure every rupee you spend is an investment, not an expense. This is the fastest route to reaching your targeted audience.</p>
+                        
+                        <div class="services-list row g-3">
+                            <div class="col-6"><div class="s-item">Meta Ads (FB/Insta)</div></div>
+                            <div class="col-6"><div class="s-item">Google Search Ads</div></div>
+                            <div class="col-6"><div class="s-item">Audience Targeting</div></div>
+                            <div class="col-6"><div class="s-item">A/B Testing</div></div>
+                            <div class="col-6"><div class="s-item">Funnel Optimization</div></div>
+                            <div class="col-6"><div class="s-item">Campaign Scaling</div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="work-process">
+            <h2 style="font-size: 2.5rem;">Our <span class="highlight">Workflow</span></h2>
+            <div class="process-grid">
+                <div class="p-card">
+                    <span class="step">01</span>
+                    <h4>Research</h4>
+                    <p style="color: var(--text-gray);">We build a winning strategy by analyzing market trends and performing deep competitor audits.</p>
+                </div>
+                <div class="p-card">
+                    <span class="step">02</span>
+                    <h4>Launch</h4>
+                    <p style="color: var(--text-gray);">We go live with optimized campaigns, full pixel integration, and conversion tracking setups.</p>
+                </div>
+                <div class="p-card">
+                    <span class="step">03</span>
+                    <h4>Scale</h4>
+                    <p style="color: var(--text-gray);">Through daily monitoring, we scale winning ads to ensure you achieve maximum possible results.</p>
+                </div>
+            </div>
+        </section>
+
+        <center>
+            <a href="index.html" class="back-home">BACK TO HOME</a>
+        </center>
+    </div>
+
+    <footer class="bg-black mt-5">
+        <div class="container">
+            <div class="row g-4 mb-5">
+                <div class="col-lg-4">
+                    <img src="LOGO.png" alt="Logo" height="50" class="mb-4">
+                    <p class="small opacity-50">Elevating brands through strategic design and digital marketing excellence.</p>
+                </div>
+                <div class="col-lg-2">
+                    <h5 class="mb-4">Quick Links</h5>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h5 class="mb-4">Expertise</h5>
+                    <ul class="footer-links">
+                        <li><a href="social-media.html">Social Media</a></li>
+                        <li><a href="brandingC.html">Branding</a></li>
+                        <li><a href="website-seo.html">SEO</a></li>
+                        <li><a href="video-editing.html">Video Production</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h5 class="mb-4">Connect</h5>
+                    <div class="d-flex gap-3 fs-4">
+                        <a href="#" class="neon-text"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="neon-text"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="neon-text"><i class="bi bi-twitter-x"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center pt-4 border-top border-secondary border-opacity-25">
+                <p class="mb-0 opacity-50 small">&copy; 2026 Zed Elevate Digital. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="theme.js"></script>
+</body>
+</html>
