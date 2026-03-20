@@ -15,7 +15,7 @@ export default function PaidAdsPage() {
         { icon: 'bi-funnel', title: 'Conversion Funnels', desc: 'Optimized sales funnels' },
         { icon: 'bi-arrow-repeat', title: 'Retargeting', desc: 'Re-engage potential customers' },
       ]}
-      image="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop"
+      image="/3.jpg"
       stats={[
         { value: '5X', label: 'Average ROAS' },
         { value: '₹10Cr+', label: 'Ad Spend Managed' },

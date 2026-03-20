@@ -31,7 +31,7 @@ export default function Footer() {
           <div className="col-lg-3">
             <h5 className="mb-4 text-start">Connect</h5>
             <div className="d-flex gap-3 fs-4">
-              <a href="#" className="neon-text"><i className="bi bi-instagram"></i></a>
+              <a href="https://www.instagram.com/zed_elevate_digital" target="_blank" rel="noopener noreferrer" className="neon-text"><i className="bi bi-instagram"></i></a>
               <a href="#" className="neon-text"><i className="bi bi-linkedin"></i></a>
               <a href="#" className="neon-text"><i className="bi bi-twitter-x"></i></a>
               <a href="#" className="neon-text"><i className="bi bi-facebook"></i></a>

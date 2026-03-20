@@ -9,6 +9,7 @@ export default function HomePage() {
       {/* Hero */}
       <section id="home" className="hero">
         <div className="container" data-aos="zoom-in">
+          <img src="/zedelevatedigital.png" alt="Zed Elevate Digital" style={{ width: '120px', height: '120px', objectFit: 'contain', marginBottom: '20px', borderRadius: '50%' }} />
           <h1>Elevate Your Digital <br /><span className="neon-text"> Presence Today.</span></h1>
           <p className="lead mb-5 opacity-75 mx-auto" style={{ maxWidth: '800px' }}>
             Zed Elevate Digital empowers brands with impactful design, strategic marketing, and performance-focused campaigns that drive visibility, engagement, and real business growth.
@@ -60,12 +61,12 @@ export default function HomePage() {
           </div>
           <div className="row g-4 justify-content-center">
             {[
-              { title: 'Social Media', sub: 'Strategic Growth', img: 'https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=800&auto=format&fit=crop', color: 'blue', link: '/services/social-media' },
-              { title: 'Designing', sub: 'Creative Artistry', img: 'https://images.unsplash.com/photo-1558655146-d09347e92766?q=80&w=800&auto=format&fit=crop', color: 'purple', link: '/services/designing' },
+              { title: 'Social Media', sub: 'Strategic Growth', img: '/1.jpg', color: 'blue', link: '/services/social-media' },
+              { title: 'Designing', sub: 'Creative Artistry', img: '/4.jpg', color: 'purple', link: '/services/designing' },
               { title: 'Video Editing', sub: 'Motion Mastery', img: 'https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?q=80&w=800&auto=format&fit=crop', color: 'green', link: '/services/video-editing' },
-              { title: 'Paid Ads', sub: 'Maximum ROI', img: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop', color: 'orange', link: '/services/paid-ads' },
-              { title: 'Website / SEO', sub: 'Digital Visibility', img: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop', color: 'blue', link: '/services/website-seo' },
-              { title: 'Branding', sub: 'Identity Design', img: 'https://images.unsplash.com/photo-1558655146-d09347e92766?q=80&w=800&auto=format&fit=crop', color: 'purple', link: '/services/branding' },
+              { title: 'Paid Ads', sub: 'Maximum ROI', img: '/3.jpg', color: 'orange', link: '/services/paid-ads' },
+              { title: 'Website / SEO', sub: 'Digital Visibility', img: '/2.jpg', color: 'blue', link: '/services/website-seo' },
+              { title: 'Branding', sub: 'Identity Design', img: '/5.jpg', color: 'purple', link: '/services/branding' },
             ].map((s, i) => (
               <div className="col-lg-4 col-md-6" key={i}>
                 <Link to={s.link} className="service-tile-link">

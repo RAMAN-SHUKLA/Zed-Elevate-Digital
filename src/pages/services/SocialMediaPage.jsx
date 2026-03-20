@@ -48,7 +48,7 @@ export default function SocialMediaPage() {
               <div className="col-lg-6 order-lg-2 order-1">
                 <div className="expertise-visual" data-aos="fade-left">
                   <div className="image-frame">
-                    <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?q=80&w=800&auto=format&fit=crop" alt="Social Media Strategy" className="img-fluid rounded-4" />
+                    <img src="/1.jpg" alt="Social Media Strategy" className="img-fluid rounded-4" />
                     <div className="image-overlay">
                       <div className="overlay-content">
                         <div className="stats">

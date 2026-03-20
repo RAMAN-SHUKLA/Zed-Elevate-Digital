@@ -15,7 +15,7 @@ export default function WebsiteSeoPage() {
         { icon: 'bi-code-slash', title: 'Web Development', desc: 'Custom responsive websites' },
         { icon: 'bi-bar-chart', title: 'Analytics Setup', desc: 'GA4, Search Console & tracking' },
       ]}
-      image="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop"
+      image="/2.jpg"
       stats={[
         { value: '1st Page', label: 'Google Rankings' },
         { value: '300%', label: 'Traffic Growth' },

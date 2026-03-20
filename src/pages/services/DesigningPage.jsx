@@ -15,7 +15,7 @@ export default function DesigningPage() {
         { icon: 'bi-file-earmark-richtext', title: 'Print Design', desc: 'Business cards, brochures & more' },
         { icon: 'bi-star', title: 'Logo Design', desc: 'Memorable brand marks' },
       ]}
-      image="https://images.unsplash.com/photo-1558655146-d09347e92766?q=80&w=800&auto=format&fit=crop"
+      image="/4.jpg"
       stats={[
         { value: '500+', label: 'Designs Created' },
         { value: '100+', label: 'Happy Clients' },

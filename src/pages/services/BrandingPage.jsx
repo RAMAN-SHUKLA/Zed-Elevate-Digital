@@ -20,7 +20,7 @@ export default function BrandingPage() {
         <div className="row align-items-center g-5">
           <div className="col-lg-6" data-aos="fade-right">
             <div className="position-relative">
-              <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?q=80&w=800&auto=format&fit=crop" alt="Branding & Visual Identity" className="img-fluid rounded-4 shadow-lg" />
+              <img src="/5.jpg" alt="Branding & Visual Identity" className="img-fluid rounded-4 shadow-lg" />
               <div className="transform-badge" style={{ position: 'absolute', bottom: '20px', right: '20px', background: 'var(--neon-blue)', color: '#000', padding: '10px 20px', borderRadius: '50px', fontWeight: 'bold' }}>✨ Brand Transformation</div>
             </div>
           </div>

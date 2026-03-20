@@ -53,9 +53,6 @@ export default function Navbar() {
             <li className="nav-item">
               <a className="nav-link" href="/#pricing">Pricing</a>
             </li>
-            <li className="nav-item d-none d-lg-block">
-              <Link to="/about" className="nav-btn-pill btn-portfolio-outline">About Us</Link>
-            </li>
             <li className="nav-item">
               <a href="https://calendly.com/zedelevatedigital/30min" className="nav-btn-pill btn-book-meeting">Book a Meeting</a>
             </li>
