@@ -2,7 +2,7 @@
 
 A premium, modern React application for **Zed Elevate Digital**, a leading creative agency specializing in branding, marketing, and sophisticated digital experiences.
 
-![Homepage Banner](https://zedelevatedigital.app/riyadidi_img.png)
+![Homepage Banner](./riyadidi_img.png)
 
 ## 🚀 Live Demo
 Managed and hosted on Vercel: [https://zedelevatedigital.in](https://zedelevatedigital.in) (Custom Domain)
