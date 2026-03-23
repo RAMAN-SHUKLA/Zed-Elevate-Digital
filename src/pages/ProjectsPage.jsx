@@ -5,11 +5,11 @@ import AOS from 'aos';
 
 const DEFAULT_PROJECTS = [
   { id: 1, title: "Banarasi Saree House", category: "branding", image: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=1200&h=800&fit=crop", link: "/case-studies/banarasi-saree-house" },
-  { id: 2, title: "Rajasthan Heritage Tours", category: "branding", image: "https://images.unsplash.com/photo-1631867675167-90a456a90863?w=1200&h=800&fit=crop", link: "/case-studies/rajasthan-heritage" },
-  { id: 3, title: "Mumbai Street Food Hub", category: "web", image: "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?w=1200&h=800&fit=crop", link: "/case-studies/mumbai-street-food" },
+  { id: 2, title: "Rajasthan Heritage Tours", category: "branding", image: "https://images.unsplash.com/photo-1596394636738-8a6385be0e2d?w=1200&h=800&fit=crop", link: "/case-studies/rajasthan-heritage" },
+  { id: 3, title: "Mumbai Street Food Hub", category: "web", image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=1200&h=800&fit=crop", link: "/case-studies/mumbai-street-food" },
   { id: 4, title: "Kerala Ayurveda Center", category: "web", image: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=1200&h=800&fit=crop", link: "/case-studies/kerala-ayurveda" },
-  { id: 5, title: "Diwali Festive Campaign", category: "marketing", image: "https://images.unsplash.com/photo-1662720868850-e60cefb03201?w=1200&h=800&fit=crop", link: "/case-studies/diwali-campaign" },
-  { id: 6, title: "Wedding Season Marketing", category: "marketing", image: "https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=1200&h=800&fit=crop", link: "/case-studies/wedding-marketing" },
+  { id: 5, title: "Diwali Festive Campaign", category: "marketing", image: "https://images.unsplash.com/photo-1608788989492-85a9c9b5c2b8?w=1200&h=800&fit=crop", link: "/case-studies/diwali-campaign" },
+  { id: 6, title: "Wedding Season Marketing", category: "marketing", image: "https://images.unsplash.com/photo-1511795406837-7a9c73e5b2f5?w=1200&h=800&fit=crop", link: "/case-studies/wedding-marketing" },
 ];
 
 export default function ProjectsPage() {

@@ -3,22 +3,22 @@ import ServicePage from '../../components/ServicePage';
 export default function WebsiteSeoPage() {
   return (
     <ServicePage
-      title="Website SEO"
-      subtitle="DIGITAL VISIBILITY & RANKING"
-      badgeText="SEO Excellence"
-      description="We build high-performance websites and optimize them for search engines to ensure your brand dominates Google rankings. From technical SEO to content strategy, we cover it all."
+      title="SEO Services in Kanpur"
+      subtitle="LOCAL SEO & WEBSITE DEVELOPMENT"
+      badgeText="Best SEO Agency Kanpur"
+      description="Zed Elevate Digital is the top IT company in Kanpur for website development and SEO services. We help businesses rank on the first page of Google with localized strategies and high-performance web solutions."
       features={[
-        { icon: 'bi-search', title: 'Technical SEO', desc: 'Site speed, structure & crawlability' },
-        { icon: 'bi-file-earmark-text', title: 'Content Strategy', desc: 'SEO-optimized content creation' },
-        { icon: 'bi-link-45deg', title: 'Link Building', desc: 'High-authority backlink strategies' },
-        { icon: 'bi-geo-alt', title: 'Local SEO', desc: 'Google My Business optimization' },
-        { icon: 'bi-code-slash', title: 'Web Development', desc: 'Custom responsive websites' },
-        { icon: 'bi-bar-chart', title: 'Analytics Setup', desc: 'GA4, Search Console & tracking' },
+        { icon: 'bi-search', title: 'Local SEO Kanpur', desc: 'Dominate "near me" searches with expert optimization.' },
+        { icon: 'bi-file-earmark-text', title: 'Content Marketing', desc: 'Keyword-rich content that converts visitors into customers.' },
+        { icon: 'bi-link-45deg', title: 'Google Ads Service', desc: 'ROI-focused PPC services in Kanpur for instant traffic.' },
+        { icon: 'bi-geo-alt', title: 'Business Profile', desc: 'Google My Business optimization for Kanpur businesses.' },
+        { icon: 'bi-code-slash', title: 'Website Development', desc: 'We are a premier website development company in Kanpur.' },
+        { icon: 'bi-bar-chart', title: 'Search Analytics', desc: 'Detailed tracking with GA4 and Google Search Console.' },
       ]}
       image="/2.jpg"
       stats={[
-        { value: '1st Page', label: 'Google Rankings' },
-        { value: '300%', label: 'Traffic Growth' },
+        { value: 'Top 3', label: 'Local Rankings' },
+        { value: '500%', label: 'Leads Increase' },
       ]}
     />
   );

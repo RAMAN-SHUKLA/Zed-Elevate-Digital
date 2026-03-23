@@ -10,9 +10,9 @@ export default function HomePage() {
       <section id="home" className="hero">
         <div className="container" data-aos="zoom-in">
           <img src="/zedelevatedigital.png" alt="Zed Elevate Digital" style={{ width: '120px', height: '120px', objectFit: 'contain', marginBottom: '20px', borderRadius: '50%' }} />
-          <h1>Elevate Your Digital <br /><span className="neon-text"> Presence Today.</span></h1>
+          <h1><span className="neon-text">Digital Marketing Agency in Kanpur</span> <br /> Elevate Your Presence Today.</h1>
           <p className="lead mb-5 opacity-75 mx-auto" style={{ maxWidth: '800px' }}>
-            Zed Elevate Digital empowers brands with impactful design, strategic marketing, and performance-focused campaigns that drive visibility, engagement, and real business growth.
+            Zed Elevate Digital is the <strong>best digital marketing company in Kanpur</strong>. We provide affordable digital marketing services in Kanpur, Uttar Pradesh, helping brands scale with ROI-driven strategies.
           </p>
 
           <div className="d-flex flex-wrap justify-content-center gap-3">
@@ -56,16 +56,16 @@ export default function HomePage() {
       <section id="services" className="section-padding bg-black">
         <div className="container">
           <div className="text-center mb-5">
-            <h2 className="neon-text display-4 fw-bold">Our Core Services</h2>
-            <p className="opacity-50 fs-5">Click on any service to explore details.</p>
+            <h2 className="neon-text display-4 fw-bold">Top Marketing Agency in Kanpur</h2>
+            <p className="opacity-50 fs-5">Leading provider of SEO services and website development in Kanpur.</p>
           </div>
           <div className="row g-4 justify-content-center">
             {[
-              { title: 'Social Media', sub: 'Strategic Growth', img: '/1.jpg', color: 'blue', link: '/services/social-media' },
-              { title: 'Designing', sub: 'Creative Artistry', img: '/4.jpg', color: 'purple', link: '/services/designing' },
+              { title: 'Social Media Marketing', sub: 'Social Media Management Kanpur', img: '/1.jpg', color: 'blue', link: '/services/social-media' },
+              { title: 'Graphic Designing', sub: 'Branding Agency in Kanpur', img: '/4.jpg', color: 'purple', link: '/services/designing' },
               { title: 'Video Editing', sub: 'Motion Mastery', img: 'https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?q=80&w=800&auto=format&fit=crop', color: 'green', link: '/services/video-editing' },
-              { title: 'Paid Ads', sub: 'Maximum ROI', img: '/3.jpg', color: 'orange', link: '/services/paid-ads' },
-              { title: 'Website / SEO', sub: 'Digital Visibility', img: '/2.jpg', color: 'blue', link: '/services/website-seo' },
+              { title: 'PPC & Ads', sub: 'PPC Services in Kanpur', img: '/3.jpg', color: 'orange', link: '/services/paid-ads' },
+              { title: 'Website / SEO', sub: 'Local SEO Services Kanpur', img: '/2.jpg', color: 'blue', link: '/services/website-seo' },
               { title: 'Branding', sub: 'Identity Design', img: '/5.jpg', color: 'purple', link: '/services/branding' },
             ].map((s, i) => (
               <div className="col-lg-4 col-md-6" key={i}>
@@ -73,7 +73,7 @@ export default function HomePage() {
                   <div className={`service-card-modern card-accent-${s.color}`}>
                     <div className="service-card-inner">
                       <div className="service-image-wrapper">
-                        <img src={s.img} alt={s.title} />
+                        <img src={s.img} alt={`${s.title} - ${s.sub}`} />
                         <div className="btn-view"><i className="bi bi-arrow-right"></i></div>
                       </div>
                       <div className="service-content-modern">
@@ -103,9 +103,9 @@ export default function HomePage() {
           <div className="row g-4 mb-5">
             {[
               { title: "Banarasi Saree House", category: "Branding", img: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=1200&h=800&fit=crop" },
-              { title: "Rajasthan Heritage", category: "Branding", img: "https://images.unsplash.com/photo-1631867675167-90a456a90863?w=1200&h=800&fit=crop" },
-              { title: "Diwali Campaign", category: "Marketing", img: "https://images.unsplash.com/photo-1662720868850-e60cefb03201?w=1200&h=800&fit=crop" },
-              { title: "Wedding Marketing", category: "Marketing", img: "https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=1200&h=800&fit=crop" }
+              { title: "Rajasthan Heritage", category: "Branding", img: "https://images.unsplash.com/photo-1596394636738-8a6385be0e2d?w=1200&h=800&fit=crop" },
+              { title: "Diwali Campaign", category: "Marketing", img: "https://images.unsplash.com/photo-1608788989492-85a9c9b5c2b8?w=1200&h=800&fit=crop" },
+              { title: "Wedding Marketing", category: "Marketing", img: "https://images.unsplash.com/photo-1511795406837-7a9c73e5b2f5?w=1200&h=800&fit=crop" }
             ].map((p, i) => (
               <div className="col-lg-6" key={i} data-aos="fade-up" data-aos-delay={i * 100}>
                 <div className="project-card-modern">

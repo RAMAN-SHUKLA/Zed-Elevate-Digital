@@ -5,9 +5,13 @@ export default function BlogPage() {
   useAOS();
 
   const posts = [
+    { img: 'https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=600', tag: 'KANPUR BUSINESS', date: 'Mar 23, 2026', title: 'Top 5 Digital Marketing Agencies in Kanpur (2026)', desc: 'Discover the leading agencies helping local businesses scale with SEO and SMM.', link: '/blog/top-agencies-kanpur' },
+    { img: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=600', tag: 'WEB DEVELOPMENT', date: 'Mar 23, 2026', title: 'Why Every Kanpur Business Needs a Professional Website', desc: 'Build trust and capture leads 24/7 with a premium digital storefront.', link: '/blog/business-website-kanpur' },
+    { img: 'https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=600', tag: 'CONTENT STRATEGY', date: 'Mar 23, 2026', title: 'Boosting Reels Engagement: Guide for Kanpur Brands', desc: 'Master short-form video to grow your local presence organically.', link: '/blog/reels-engagement-guide' },
+    { img: 'https://images.unsplash.com/photo-1571721795195-a2ca2d3370a9?auto=format&fit=crop&w=600', tag: 'SEO TIPS', date: 'Mar 23, 2026', title: 'How to Rank on Google: Tips for Kanpur Entrepreneurs', desc: 'Cost-effective SEO strategies to dominate local search results.', link: '/blog/rank-on-google-tips' },
+    { img: 'https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=600', tag: 'BRAND STRATEGY', date: 'Mar 23, 2026', title: 'Branding vs. Marketing: Which One for Your Startup?', desc: 'Understand the key differences to build a lasting and scalable business.', link: '/blog/branding-vs-marketing' },
     { img: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=600', tag: 'AI & TECH', date: 'Mar 10, 2026', title: 'AI in Design 2026: The Future of Creativity', desc: 'How AI is changing video editing and graphic design workflows this year.', link: '/blog/ai-in-design' },
     { img: 'https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=600', tag: 'SOCIAL MEDIA', date: 'Mar 08, 2026', title: 'Mastering the 3-Second Hook for Viral Reels', desc: 'In 2026, the battle for attention is won in the first few moments.', link: '/blog/reels-engagement' },
-    { img: 'https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=600', tag: 'BRANDING', date: 'Mar 05, 2026', title: 'Building Legacies: The ROI of Brand Identity', desc: 'Why consistent branding is your most valuable asset in a digital world.', link: '/services/branding' },
   ];
 
   return (

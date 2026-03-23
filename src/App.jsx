@@ -27,6 +27,11 @@ import ScalingPage from './pages/services/ScalingPage';
 
 import AiInDesignPage from './pages/blog/AiInDesignPage';
 import ReelsEngagementPage from './pages/blog/ReelsEngagementPage';
+import TopAgenciesKanpur from './pages/blog/TopAgenciesKanpur';
+import BusinessWebsiteKanpur from './pages/blog/BusinessWebsiteKanpur';
+import ReelsEngagementGuide from './pages/blog/ReelsEngagementGuide';
+import RankOnGoogleTips from './pages/blog/RankOnGoogleTips';
+import BrandingVsMarketing from './pages/blog/BrandingVsMarketing';
 
 import CaseStudyPage from './pages/case-studies/CaseStudyPage';
 
@@ -74,6 +79,11 @@ function Layout() {
         {/* Blog Articles */}
         <Route path="/blog/ai-in-design" element={<AiInDesignPage />} />
         <Route path="/blog/reels-engagement" element={<ReelsEngagementPage />} />
+        <Route path="/blog/top-agencies-kanpur" element={<TopAgenciesKanpur />} />
+        <Route path="/blog/business-website-kanpur" element={<BusinessWebsiteKanpur />} />
+        <Route path="/blog/reels-engagement-guide" element={<ReelsEngagementGuide />} />
+        <Route path="/blog/rank-on-google-tips" element={<RankOnGoogleTips />} />
+        <Route path="/blog/branding-vs-marketing" element={<BrandingVsMarketing />} />
 
         {/* Case Studies */}
         <Route path="/case-studies/:slug" element={<CaseStudyPage />} />
