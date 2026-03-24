@@ -4,12 +4,12 @@ import useAOS from '../hooks/useAOS';
 import AOS from 'aos';
 
 const DEFAULT_PROJECTS = [
-  { id: 1, title: "Banarasi Saree House", category: "branding", image: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=1200&auto=format&fit=crop", link: "/case-studies/banarasi-saree-house" },
-  { id: 2, title: "Rajasthan Heritage Tours", category: "branding", image: "https://source.unsplash.com/_WvFZN9Q-vY/1200x800", link: "/case-studies/rajasthan-heritage" },
-  { id: 3, title: "Mumbai Street Food Hub", category: "web", image: "https://source.unsplash.com/z5UMFvTVXZg/1200x800", link: "/case-studies/mumbai-street-food" },
-  { id: 4, title: "Kerala Ayurveda Center", category: "web", image: "https://source.unsplash.com/kEF2XCBE4TY/1200x800", link: "/case-studies/kerala-ayurveda" },
-  { id: 5, title: "Diwali Festive Campaign", category: "marketing", image: "https://source.unsplash.com/evtL96IfR2E/1200x800", link: "/case-studies/diwali-campaign" },
-  { id: 6, title: "Wedding Season Marketing", category: "marketing", image: "https://source.unsplash.com/g3ppTBTQam8/1200x800", link: "/case-studies/wedding-marketing" },
+  { id: 1, title: "Banarasi Saree House", category: "branding", image: "/1.jpg", link: "/case-studies/banarasi-saree-house" },
+  { id: 2, title: "Rajasthan Heritage Tours", category: "branding", image: "/rajasthan.jpg", link: "/case-studies/rajasthan-heritage" },
+  { id: 3, title: "Mumbai Street Food Hub", category: "web", image: "/streetfood.jpg", link: "/case-studies/mumbai-street-food" },
+  { id: 4, title: "Kerala Ayurveda Center", category: "web", image: "/ayurved.jpg", link: "/case-studies/kerala-ayurveda" },
+  { id: 5, title: "Diwali Festive Campaign", category: "marketing", image: "/diwali.jpg", link: "/case-studies/diwali-campaign" },
+  { id: 6, title: "Wedding Season Marketing", category: "marketing", image: "/wedding.jpg", link: "/case-studies/wedding-marketing" },
 ];
 
 export default function ProjectsPage() {
@@ -19,9 +19,9 @@ export default function ProjectsPage() {
 
   useEffect(() => {
     // Force refresh defaults using a new key to avoid stale data
-    const stored = localStorage.getItem('zed_projects_v10');
+    const stored = localStorage.getItem('zed_projects_v11');
     if (!stored) {
-      localStorage.setItem('zed_projects_v10', JSON.stringify(DEFAULT_PROJECTS));
+      localStorage.setItem('zed_projects_v11', JSON.stringify(DEFAULT_PROJECTS));
       setProjects(DEFAULT_PROJECTS);
     } else {
       setProjects(JSON.parse(stored));
