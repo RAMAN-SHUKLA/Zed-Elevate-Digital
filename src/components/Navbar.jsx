@@ -17,7 +17,7 @@ export default function Navbar() {
     <nav className={`navbar navbar-expand-lg navbar-dark sticky-top ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container">
         <Link className="navbar-brand d-flex align-items-center" to="/">
-          <img src="/LOGO.png" alt="Zed Elevate Logo" style={{ height: '50px', width: 'auto' }} />
+          <img src="/LOGO.png" alt="Zed Elevate Logo" style={{ height: '75px', width: 'auto' }} />
         </Link>
         <button 
           className="navbar-toggler" 
