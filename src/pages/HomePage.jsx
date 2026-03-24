@@ -9,10 +9,9 @@ export default function HomePage() {
       {/* Hero */}
       <section id="home" className="hero">
         <div className="container" data-aos="zoom-in">
-          <img src="/zedelevatedigital.png" alt="Zed Elevate Digital" style={{ width: '120px', height: '120px', objectFit: 'contain', marginBottom: '20px', borderRadius: '50%' }} />
-          <h1><span className="neon-text">Digital Marketing Agency in Kanpur</span> <br /> Elevate Your Presence Today.</h1>
+          <h1>Elevate Your Digital <br /><span className="neon-text"> Presence Today.</span></h1>
           <p className="lead mb-5 opacity-75 mx-auto" style={{ maxWidth: '800px' }}>
-            Zed Elevate Digital is the <strong>best digital marketing company in Kanpur</strong>. We provide affordable digital marketing services in Kanpur, Uttar Pradesh, helping brands scale with ROI-driven strategies.
+            Zed Elevate Digital empowers brands with impactful design, strategic marketing, and scalable development.
           </p>
 
           <div className="d-flex flex-wrap justify-content-center gap-3">
@@ -102,10 +101,10 @@ export default function HomePage() {
           </div>
           <div className="row g-4 mb-5">
             {[
-              { title: "Banarasi Saree House", category: "Branding", img: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=1200&h=800&fit=crop" },
-              { title: "Rajasthan Heritage", category: "Branding", img: "https://images.unsplash.com/photo-1596394636738-8a6385be0e2d?w=1200&h=800&fit=crop" },
-              { title: "Diwali Campaign", category: "Marketing", img: "https://images.unsplash.com/photo-1608788989492-85a9c9b5c2b8?w=1200&h=800&fit=crop" },
-              { title: "Wedding Marketing", category: "Marketing", img: "https://images.unsplash.com/photo-1511795406837-7a9c73e5b2f5?w=1200&h=800&fit=crop" }
+              { title: "Banarasi Saree House", category: "Branding", img: "/1.jpg" },
+              { title: "Rajasthan Heritage", category: "Branding", img: "/2.jpg" },
+              { title: "Diwali Campaign", category: "Marketing", img: "/3.jpg" },
+              { title: "Wedding Marketing", category: "Marketing", img: "/4.jpg" }
             ].map((p, i) => (
               <div className="col-lg-6" key={i} data-aos="fade-up" data-aos-delay={i * 100}>
                 <div className="project-card-modern">
@@ -153,7 +152,7 @@ export default function HomePage() {
                 <div className="testimonial-card" key={i}>
                   <i className="bi bi-quote quote-icon"></i>
                   <div className="testimonial-header">
-                    <img src={t.img} alt={t.name} className="testimonial-img" />
+                    <img src={t.img} alt={t.name} className="testimonial-img" style={{ width: '60px', height: '60px', borderRadius: '50%', objectFit: 'cover' }} />
                     <div className="testimonial-info">
                       <h5>{t.name}</h5>
                       <p>{t.role}</p>
@@ -179,14 +178,15 @@ export default function HomePage() {
           <div className="row g-4 justify-content-center">
             <div className="col-lg-4 col-md-6" data-aos="fade-up">
               <div className="pricing-card">
-                <h4 className="fw-bold">Starter</h4>
+                <h4 className="fw-bold">STARTER PLAN</h4>
                 <p className="small opacity-50">Perfect for small businesses</p>
-                <div className="price-amount">₹7999 <span className="price-period">/ month</span></div>
+                <div className="price-amount">₹3,999 <span className="price-period">/ month</span></div>
                 <ul className="pricing-features">
-                  <li><i className="bi bi-check2-circle"></i> Social Media Management</li>
-                  <li><i className="bi bi-check2-circle"></i> 12 Basic Post Designs & 10 Professional Reels </li>
-                  <li><i className="bi bi-check2-circle"></i> Basic SEO Optimization</li>
-                  <li><i className="bi bi-check2-circle"></i> Monthly Report</li>
+                  <li><i className="bi bi-check2-circle"></i> 10 Social Media Posts (Graphics)</li>
+                  <li><i className="bi bi-check2-circle"></i> 12 Reels / Short Videos</li>
+                  <li><i className="bi bi-check2-circle"></i> Basic Caption Writing</li>
+                  <li><i className="bi bi-check2-circle"></i> Hashtag Research</li>
+                  <li><i className="bi bi-check2-circle"></i> Basic Page Management</li>
                 </ul>
                 <a href="https://wa.me/+917348144937?text=Hi%20Zed%20Elevate%2C%20I'm%20interested%20in%20the%20Starter%20Plan." className="btn-pricing">GET STARTED</a>
               </div>
@@ -197,13 +197,15 @@ export default function HomePage() {
                 <div className="popular-tag">Most Popular</div>
                 <h4 className="fw-bold">Professional</h4>
                 <p className="small opacity-50">Scaling brands to the next level</p>
-                <div className="price-amount"> ₹14999 <span className="price-period">/ month</span></div>
+                <div className="price-amount"> ₹6,999 <span className="price-period">/ month</span></div>
                 <ul className="pricing-features">
-                  <li><i className="bi bi-check2-circle"></i> Everything in Starter</li>
-                  <li><i className="bi bi-check2-circle"></i> High-End Video Editing</li>
-                  <li><i className="bi bi-check2-circle"></i> Paid Ads Management</li>
-                  <li><i className="bi bi-check2-circle"></i> Advanced Data Analytics</li>
+                  <li><i className="bi bi-check2-circle"></i> 15 Social Media Posts</li>
+                  <li><i className="bi bi-check2-circle"></i> 12 Reels / High Quality Videos</li>
+                  <li><i className="bi bi-check2-circle"></i> Advanced Video Editing</li>
+                  <li><i className="bi bi-check2-circle"></i> Content Strategy + Planning</li>
+                  <li><i className="bi bi-check2-circle"></i> Branding Support</li>
                   <li><i className="bi bi-check2-circle"></i> Priority Support</li>
+                  <li><i className="bi bi-check2-circle"></i> Meta Ads Management</li>
                 </ul>
                 <a href="https://wa.me/+917348144937?text=Hi%20Zed%20Elevate%2C%20I'm%20interested%20in%20the%20Professional%20Plan." className="btn-pricing">GO PRO</a>
               </div>
