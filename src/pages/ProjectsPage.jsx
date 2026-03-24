@@ -4,7 +4,7 @@ import useAOS from '../hooks/useAOS';
 import AOS from 'aos';
 
 const DEFAULT_PROJECTS = [
-  { id: 1, title: "Banarasi Saree House", category: "branding", image: "/1.jpg", link: "/case-studies/banarasi-saree-house" },
+  { id: 1, title: "Banarasi Saree House", category: "branding", image: "/banaras.jpg", link: "/case-studies/banarasi-saree-house" },
   { id: 2, title: "Rajasthan Heritage Tours", category: "branding", image: "/rajasthan.jpg", link: "/case-studies/rajasthan-heritage" },
   { id: 3, title: "Mumbai Street Food Hub", category: "web", image: "/streetfood.jpg", link: "/case-studies/mumbai-street-food" },
   { id: 4, title: "Kerala Ayurveda Center", category: "web", image: "/ayurved.jpg", link: "/case-studies/kerala-ayurveda" },
@@ -19,9 +19,9 @@ export default function ProjectsPage() {
 
   useEffect(() => {
     // Force refresh defaults using a new key to avoid stale data
-    const stored = localStorage.getItem('zed_projects_v11');
+    const stored = localStorage.getItem('zed_projects_v12');
     if (!stored) {
-      localStorage.setItem('zed_projects_v11', JSON.stringify(DEFAULT_PROJECTS));
+      localStorage.setItem('zed_projects_v12', JSON.stringify(DEFAULT_PROJECTS));
       setProjects(DEFAULT_PROJECTS);
     } else {
       setProjects(JSON.parse(stored));

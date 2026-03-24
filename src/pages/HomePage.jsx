@@ -101,7 +101,7 @@ export default function HomePage() {
           </div>
           <div className="row g-4 mb-5">
             {[
-              { title: "Banarasi Saree House", category: "Branding", img: "/1.jpg" },
+              { title: "Banarasi Saree House", category: "Branding", img: "/banaras.jpg" },
               { title: "Rajasthan Heritage", category: "Branding", img: "/rajasthan.jpg" },
               { title: "Diwali Campaign", category: "Marketing", img: "/diwali.jpg" },
               { title: "Wedding Marketing", category: "Marketing", img: "/wedding.jpg" }
