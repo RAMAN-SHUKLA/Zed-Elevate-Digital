@@ -152,7 +152,7 @@ export default function HomePage() {
                 <div className="testimonial-card" key={i}>
                   <i className="bi bi-quote quote-icon"></i>
                   <div className="testimonial-header">
-                    <img src={t.img} alt={t.name} className="testimonial-img" style={{ width: '60px', height: '60px', borderRadius: '50%', objectFit: 'cover' }} />
+                    <img src={t.img} alt={t.name} className="testimonial-img" style={{ width: '60px', height: '60px', minWidth: '60px', minHeight: '60px', borderRadius: '50%', objectFit: 'cover', aspectRatio: '1/1' }} />
                     <div className="testimonial-info">
                       <h5>{t.name}</h5>
                       <p>{t.role}</p>

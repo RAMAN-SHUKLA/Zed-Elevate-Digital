@@ -94,7 +94,7 @@ export default function ProjectsPage() {
               <div className="col-lg-4" key={i} data-aos="fade-up" data-aos-delay={i * 100}>
                 <div className="glass-card h-100 p-4">
                   <div className="d-flex align-items-center mb-3">
-                    <img src={t.img} alt={t.name} className="rounded-circle me-3" style={{ width: '60px', height: '60px', objectFit: 'cover', border: '2px solid var(--neon-blue)' }} />
+                    <img src={t.img} alt={t.name} className="rounded-circle me-3" style={{ width: '60px', height: '60px', minWidth: '60px', minHeight: '60px', objectFit: 'cover', border: '2px solid var(--neon-blue)', aspectRatio: '1/1' }} />
                     <div>
                       <h5 className="mb-0">{t.name}</h5>
                       <p className="small text-white-50 mb-0">{t.role}</p>
