@@ -53,7 +53,7 @@ export default function AboutPage() {
           <div className="row g-4 justify-content-center">
             <div className="col-lg-5 col-md-6" data-aos="zoom-in">
               <div className="glass-card text-center h-100">
-                <img src="/riyadidi_img.png" className="rounded-circle mb-4 border border-info p-2" style={{ width: '150px', height: '150px', objectFit: 'cover' }} alt="Riya Saxena" />
+                <img src="/riyadidi_img.png" className="rounded-circle mb-4 border border-info p-2 d-block mx-auto" style={{ width: '150px', height: '150px', objectFit: 'cover' }} alt="Riya Saxena" />
                 <h4>Riya Saxena</h4>
                 <p className="neon-text small">Founder</p>
                 <p className="small opacity-75">Specialized in building lean, professional systems that bridge the gap between creative vision and measurable ROI. Passionate about helping brands establish a dominant and sophisticated presence in a crowded digital landscape</p>
@@ -62,7 +62,7 @@ export default function AboutPage() {
 
             <div className="col-lg-5 col-md-6" data-aos="zoom-in" data-aos-delay="100">
               <div className="glass-card text-center h-100">
-                <img src="/zuhaib.jpeg" className="rounded-circle mb-4 border border-info p-2" style={{ width: '150px', height: '150px', objectFit: 'cover' }} alt="Zuhaib Amir Ansari" />
+                <img src="/zuhaib.jpeg" className="rounded-circle mb-4 border border-info p-2 d-block mx-auto" style={{ width: '150px', height: '150px', objectFit: 'cover' }} alt="Zuhaib Amir Ansari" />
                 <h4>Zuhaib Amir Ansari</h4>
                 <p className="neon-text small">Founder</p>
                 <p className="small opacity-75">Founder and Digital Strategist focused on building high-impact brand identities. I combine minimalist design principles with aggressive growth strategies to help modern agencies scale with precision and professional authority.</p>

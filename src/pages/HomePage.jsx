@@ -101,10 +101,10 @@ export default function HomePage() {
           </div>
           <div className="row g-4 mb-5">
             {[
-              { title: "Banarasi Saree House", category: "Branding", img: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=1200&h=800&fit=crop" },
-              { title: "Rajasthan Heritage", category: "Branding", img: "https://images.unsplash.com/photo-1596394636738-8a6385be0e2d?w=1200&h=800&fit=crop" },
-              { title: "Diwali Campaign", category: "Marketing", img: "https://images.unsplash.com/photo-1608788989492-85a9c9b5c2b8?w=1200&h=800&fit=crop" },
-              { title: "Wedding Marketing", category: "Marketing", img: "https://images.unsplash.com/photo-1511795406837-7a9c73e5b2f5?w=1200&h=800&fit=crop" }
+              { title: "Banarasi Saree House", category: "Branding", img: "/1.jpg" },
+              { title: "Rajasthan Heritage", category: "Branding", img: "/2.jpg" },
+              { title: "Diwali Campaign", category: "Marketing", img: "/3.jpg" },
+              { title: "Wedding Marketing", category: "Marketing", img: "/4.jpg" }
             ].map((p, i) => (
               <div className="col-lg-6" key={i} data-aos="fade-up" data-aos-delay={i * 100}>
                 <div className="project-card-modern">
