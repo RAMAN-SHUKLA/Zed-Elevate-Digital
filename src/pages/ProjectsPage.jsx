@@ -4,12 +4,12 @@ import useAOS from '../hooks/useAOS';
 import AOS from 'aos';
 
 const DEFAULT_PROJECTS = [
-  { id: 1, title: "Banarasi Saree House", category: "branding", image: "https://images.unsplash.com/photo-1610030469983-98e550d6193c?w=1200&h=800&fit=crop", link: "/case-studies/banarasi-saree-house" },
-  { id: 2, title: "Rajasthan Heritage Tours", category: "branding", image: "https://images.unsplash.com/photo-1596394636738-8a6385be0e2d?w=1200&h=800&fit=crop", link: "/case-studies/rajasthan-heritage" },
-  { id: 3, title: "Mumbai Street Food Hub", category: "web", image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=1200&h=800&fit=crop", link: "/case-studies/mumbai-street-food" },
-  { id: 4, title: "Kerala Ayurveda Center", category: "web", image: "https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=1200&h=800&fit=crop", link: "/case-studies/kerala-ayurveda" },
-  { id: 5, title: "Diwali Festive Campaign", category: "marketing", image: "https://images.unsplash.com/photo-1608788989492-85a9c9b5c2b8?w=1200&h=800&fit=crop", link: "/case-studies/diwali-campaign" },
-  { id: 6, title: "Wedding Season Marketing", category: "marketing", image: "https://images.unsplash.com/photo-1511795406837-7a9c73e5b2f5?w=1200&h=800&fit=crop", link: "/case-studies/wedding-marketing" },
+  { id: 1, title: "Banarasi Saree House", category: "branding", image: "/1.jpg", link: "/case-studies/banarasi-saree-house" },
+  { id: 2, title: "Rajasthan Heritage Tours", category: "branding", image: "/2.jpg", link: "/case-studies/rajasthan-heritage" },
+  { id: 3, title: "Mumbai Street Food Hub", category: "web", image: "/3.jpg", link: "/case-studies/mumbai-street-food" },
+  { id: 4, title: "Kerala Ayurveda Center", category: "web", image: "/4.jpg", link: "/case-studies/kerala-ayurveda" },
+  { id: 5, title: "Diwali Festive Campaign", category: "marketing", image: "/5.jpg", link: "/case-studies/diwali-campaign" },
+  { id: 6, title: "Wedding Season Marketing", category: "marketing", image: "/Social Media Management.png", link: "/case-studies/wedding-marketing" },
 ];
 
 export default function ProjectsPage() {
@@ -19,9 +19,9 @@ export default function ProjectsPage() {
 
   useEffect(() => {
     // Force refresh defaults using a new key to avoid stale data
-    const stored = localStorage.getItem('zed_projects_v4');
+    const stored = localStorage.getItem('zed_projects_v7');
     if (!stored) {
-      localStorage.setItem('zed_projects_v4', JSON.stringify(DEFAULT_PROJECTS));
+      localStorage.setItem('zed_projects_v7', JSON.stringify(DEFAULT_PROJECTS));
       setProjects(DEFAULT_PROJECTS);
     } else {
       setProjects(JSON.parse(stored));

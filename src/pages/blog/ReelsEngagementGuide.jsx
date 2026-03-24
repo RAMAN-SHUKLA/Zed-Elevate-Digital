@@ -15,7 +15,7 @@ export default function ReelsEngagementGuide() {
         <div className="container">
           <div className="row justify-content-center">
             <div className="col-lg-8">
-              <img src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?auto=format&fit=crop&w=1200" className="img-fluid rounded-4 mb-5 border border-info" alt="Reels Engagement Kanpur" />
+              <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=1200" className="img-fluid rounded-4 mb-5 border border-info" alt="Reels Engagement Kanpur" />
               <p className="fs-5 mb-4">Instagram Reels have become the fastest way to grow your brand organically. For Kanpur-based creators and businesses, the key is combining local charm with high-quality production.</p>
               
               <h3 className="neon-text mb-3">The Power of Choice Audio</h3>

@@ -50,8 +50,8 @@ export default function AboutPage() {
             <h2 className="display-4 fw-bold">Founded in <span className="neon-text">Partnership</span></h2>
             <p className="opacity-50">The creative minds behind your brand's success.</p>
           </div>
-          <div className="row g-4 justify-content-center align-items-center">
-            <div className="col-lg-4 col-md-5" data-aos="zoom-in">
+          <div className="row g-4 justify-content-center">
+            <div className="col-lg-5 col-md-6" data-aos="zoom-in">
               <div className="glass-card text-center h-100">
                 <img src="/riyadidi_img.png" className="rounded-circle mb-4 border border-info p-2" style={{ width: '150px', height: '150px', objectFit: 'cover' }} alt="Riya Saxena" />
                 <h4>Riya Saxena</h4>
@@ -59,12 +59,8 @@ export default function AboutPage() {
                 <p className="small opacity-75">Specialized in building lean, professional systems that bridge the gap between creative vision and measurable ROI. Passionate about helping brands establish a dominant and sophisticated presence in a crowded digital landscape</p>
               </div>
             </div>
-            
-            <div className="col-lg-3 col-md-2 text-center" data-aos="zoom-in" data-aos-delay="100">
-               <img src="/LOGO.png" alt="Zed Elevate" style={{ maxWidth: '100%', height: 'auto', maxHeight: '120px', filter: 'drop-shadow(0 0 15px rgba(0, 243, 255, 0.4))' }} />
-            </div>
 
-            <div className="col-lg-4 col-md-5" data-aos="zoom-in" data-aos-delay="200">
+            <div className="col-lg-5 col-md-6" data-aos="zoom-in" data-aos-delay="100">
               <div className="glass-card text-center h-100">
                 <img src="/zuhaib.jpeg" className="rounded-circle mb-4 border border-info p-2" style={{ width: '150px', height: '150px', objectFit: 'cover' }} alt="Zuhaib Amir Ansari" />
                 <h4>Zuhaib Amir Ansari</h4>

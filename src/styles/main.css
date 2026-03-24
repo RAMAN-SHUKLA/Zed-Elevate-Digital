@@ -768,6 +768,24 @@ input:not(:checked) + .slider .bi-moon-stars-fill { color: #f1c40f; }
     border-radius: 16px;
     padding: 30px;
     transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+    color: #ffffff !important;
+}
+
+.glass-card h1, .glass-card h2, .glass-card h3, .glass-card h4, .glass-card h5, .glass-card h6 {
+    color: #ffffff !important;
+}
+
+.glass-card p {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.glass-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    min-height: 150px;
+    background: #000;
 }
 
 .glass-card:hover {
