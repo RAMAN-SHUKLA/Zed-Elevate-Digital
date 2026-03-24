@@ -4,12 +4,12 @@ import useAOS from '../hooks/useAOS';
 import AOS from 'aos';
 
 const DEFAULT_PROJECTS = [
-  { id: 1, title: "Banarasi Saree House", category: "branding", image: "/banaras.jpg", link: "/case-studies/banarasi-saree-house" },
-  { id: 2, title: "Rajasthan Heritage Tours", category: "branding", image: "/rajasthan.jpg", link: "/case-studies/rajasthan-heritage" },
-  { id: 3, title: "Mumbai Street Food Hub", category: "web", image: "/streetfood.jpg", link: "/case-studies/mumbai-street-food" },
-  { id: 4, title: "Kerala Ayurveda Center", category: "web", image: "/ayurved.jpg", link: "/case-studies/kerala-ayurveda" },
-  { id: 5, title: "Diwali Festive Campaign", category: "marketing", image: "/diwali.jpg", link: "/case-studies/diwali-campaign" },
-  { id: 6, title: "Wedding Season Marketing", category: "marketing", image: "/wedding.jpg", link: "/case-studies/wedding-marketing" },
+  { id: 1, title: "Banarasi Saree House", category: "branding", image: "/banaras.jpg?v=final", link: "/case-studies/banarasi-saree-house" },
+  { id: 2, title: "Rajasthan Heritage Tours", category: "branding", image: "/rajasthan.jpg?v=final", link: "/case-studies/rajasthan-heritage" },
+  { id: 3, title: "Mumbai Street Food Hub", category: "web", image: "/streetfood.jpg?v=final", link: "/case-studies/mumbai-street-food" },
+  { id: 4, title: "Kerala Ayurveda Center", category: "web", image: "/ayurved.jpg?v=final", link: "/case-studies/kerala-ayurveda" },
+  { id: 5, title: "Diwali Festive Campaign", category: "marketing", image: "/diwali.jpg?v=final", link: "/case-studies/diwali-campaign" },
+  { id: 6, title: "Wedding Season Marketing", category: "marketing", image: "/wedding.jpg?v=final", link: "/case-studies/wedding-marketing" },
 ];
 
 export default function ProjectsPage() {
@@ -19,9 +19,9 @@ export default function ProjectsPage() {
 
   useEffect(() => {
     // Force refresh defaults using a new key to avoid stale data
-    const stored = localStorage.getItem('zed_projects_v12');
+    const stored = localStorage.getItem('zed_projects_v15');
     if (!stored) {
-      localStorage.setItem('zed_projects_v12', JSON.stringify(DEFAULT_PROJECTS));
+      localStorage.setItem('zed_projects_v15', JSON.stringify(DEFAULT_PROJECTS));
       setProjects(DEFAULT_PROJECTS);
     } else {
       setProjects(JSON.parse(stored));

@@ -101,10 +101,10 @@ export default function HomePage() {
           </div>
           <div className="row g-4 mb-5">
             {[
-              { title: "Banarasi Saree House", category: "Branding", img: "/banaras.jpg" },
-              { title: "Rajasthan Heritage", category: "Branding", img: "/rajasthan.jpg" },
-              { title: "Diwali Campaign", category: "Marketing", img: "/diwali.jpg" },
-              { title: "Wedding Marketing", category: "Marketing", img: "/wedding.jpg" }
+              { title: "Banarasi Saree House", category: "Branding", img: "/banaras.jpg?v=final" },
+              { title: "Rajasthan Heritage", category: "Branding", img: "/rajasthan.jpg?v=final" },
+              { title: "Diwali Campaign", category: "Marketing", img: "/diwali.jpg?v=final" },
+              { title: "Wedding Marketing", category: "Marketing", img: "/wedding.jpg?v=final" }
             ].map((p, i) => (
               <div className="col-lg-6" key={i} data-aos="fade-up" data-aos-delay={i * 100}>
                 <div className="project-card-modern">
