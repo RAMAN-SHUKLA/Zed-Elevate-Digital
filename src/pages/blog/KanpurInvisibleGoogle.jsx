@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import useAOS from '../../hooks/useAOS';
+import SEO from '../../components/SEO';
 
 export default function KanpurInvisibleGoogle() {
   useAOS();
@@ -16,6 +17,12 @@ export default function KanpurInvisibleGoogle() {
 
   return (
     <>
+      <SEO 
+        title="Why Kanpur Businesses Are Still Invisible on Google" 
+        description="Discover the 7 common mistakes Kanpur businesses make that keep them off Google Page 1 and how to fix them in 30 days."
+        keywords="local seo kanpur, google business profile kanpur, rank on google kanpur"
+        canonical="/blog/kanpur-invisible-google"
+      />
       <header className="section-padding text-center" style={{ background: 'radial-gradient(ellipse at top, rgba(0,243,255,0.15) 0%, transparent 65%)' }}>
         <div className="container" data-aos="fade-up">
           <div className="row justify-content-center">

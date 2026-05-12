@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import useAOS from '../hooks/useAOS';
+import SEO from '../components/SEO';
 
 export default function BlogPage() {
   useAOS();
@@ -16,6 +17,11 @@ export default function BlogPage() {
 
   return (
     <>
+      <SEO 
+        title="Blog & Insights" 
+        description="Stay updated with the latest digital marketing trends, SEO tips, and branding strategies for Kanpur businesses on the Zed Elevate Digital blog."
+        canonical="/blog"
+      />
       <header className="section-padding text-center" style={{ background: 'radial-gradient(circle at center, rgba(0, 243, 255, 0.1) 0%, transparent 70%)' }}>
         <div className="container" data-aos="fade-up">
           <h1 className="display-3 fw-bold mb-4">Creative <span className="neon-text">&amp; Marketing</span> Insights</h1>

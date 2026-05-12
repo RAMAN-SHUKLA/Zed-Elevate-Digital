@@ -1,11 +1,17 @@
 import { Link } from 'react-router-dom';
 import useAOS from '../hooks/useAOS';
+import SEO from '../components/SEO';
 
 export default function AboutPage() {
   useAOS();
 
   return (
     <>
+      <SEO 
+        title="About Us" 
+        description="Learn more about Zed Elevate Digital, a leading digital marketing agency in Kanpur dedicated to helping local businesses dominate search rankings and scale."
+        canonical="/about"
+      />
       <header className="section-padding text-center" style={{ background: 'radial-gradient(circle at center, rgba(0, 243, 255, 0.1) 0%, transparent 70%)' }}>
         <div className="container" data-aos="fade-up">
           <h1 className="display-3 fw-bold mb-4">Our <span className="neon-text">Story</span></h1>

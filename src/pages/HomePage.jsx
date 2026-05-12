@@ -1,11 +1,18 @@
 import { Link } from 'react-router-dom';
 import useAOS from '../hooks/useAOS';
+import SEO from '../components/SEO';
 
 export default function HomePage() {
   useAOS();
 
   return (
     <>
+      <SEO 
+        title="Home" 
+        description="Zed Elevate Digital is the best digital marketing agency in Kanpur. We help businesses scale with SEO, social media, and ROI-driven marketing strategies."
+        keywords="digital marketing agency kanpur, best seo company kanpur, social media marketing kanpur"
+        canonical="/"
+      />
       {/* Hero */}
       <section id="home" className="hero">
         <div className="container" data-aos="zoom-in">
