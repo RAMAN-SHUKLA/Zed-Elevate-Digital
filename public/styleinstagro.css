@@ -1,0 +1,114 @@
+:root {
+            --neon-blue: #00f3ff;
+            --ghost-dark: #0a0b10;
+            --card-bg: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(0, 243, 255, 0.15);
+        }
+
+        body {
+            background-color: var(--ghost-dark);
+            color: #ffffff;
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .neon-text { color: var(--neon-blue); text-shadow: 0 0 15px var(--neon-blue); }
+
+        /* --- NAVBAR WITH LARGE LOGO & FIXED HEIGHT --- */
+        .navbar { 
+            background: rgba(10, 11, 16, 0.95) !important; 
+            border-bottom: 1px solid var(--glass-border); 
+            height: 90px; /* **Navbar ki height ko 90px par fix kiya gaya hai** */
+            padding: 0 !important;
+            backdrop-filter: blur(10px);
+            z-index: 1030;
+        }
+
+        /* Navbar-Brand Flex Contatiner */
+        .navbar-brand {
+            display: flex;
+            align-items: center; /* **Vertical centering ke liye** */
+            height: 100%; /* **Contatiner ki full height tak logo ko laane ke liye** */
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+
+        /* Large Logo Style */
+        .navbar-brand img {
+            max-height: 120px; /* **Yahan logo ka size purane se lagbhag 2x kar diya gaya hai** */
+            width: auto;
+            object-fit: contain; /* **Aspect ratio maintain karne ke liye** */
+            transform: scale(1.1); /* **Visual weight badhane ke liye thoda aur scale-up** */
+        }
+
+        /* Back Button - Right Aligned */
+        .btn-back-home {
+            border: 1px solid var(--neon-blue);
+            color: var(--neon-blue);
+            padding: 10px 24px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .btn-back-home:hover { background: var(--neon-blue); color: #000; box-shadow: 0 0 20px var(--neon-blue); }
+
+        /* --- HERO SECTION --- */
+        .detail-hero { padding: 140px 0 80px; } /* **Padding adjustment** */
+        
+        .img-wrapper-mst {
+            border-radius: 25px;
+            overflow: hidden;
+            border: 2px solid var(--neon-blue);
+            box-shadow: 0 0 40px rgba(0, 243, 255, 0.2);
+        }
+        .img-wrapper-mst img {
+            width: 100%; height: 480px; object-fit: cover; display: block;
+        }
+
+        /* --- BUTTONS --- */
+        .btn-neon-main { 
+            border: none; background: var(--neon-blue); color: #000;
+            padding: 16px 45px; font-weight: 800; border-radius: 10px; 
+            transition: 0.4s; text-decoration: none; 
+            display: inline-flex; align-items: center; justify-content: center;
+            box-shadow: 0 0 20px rgba(0, 243, 255, 0.4);
+            font-size: 1.1rem;
+        }
+        .btn-neon-main:hover { transform: translateY(-3px); box-shadow: 0 0 35px var(--neon-blue); color: #000; }
+
+        /* --- MST FEATURE SECTION --- */
+        .feature-grid-section { padding: 100px 0; background: rgba(255,255,255,0.01); }
+
+        .mst-card {
+            background: var(--card-bg); border: 1px solid var(--glass-border);
+            border-radius: 30px; padding: 50px; height: 100%; transition: 0.4s;
+        }
+        .mst-card:hover { border-color: var(--neon-blue); transform: translateY(-8px); background: rgba(0, 243, 255, 0.02); }
+
+        .mst-list { list-style: none; padding: 0; }
+        .mst-list li { margin-bottom: 22px; display: flex; align-items: center; gap: 15px; font-size: 1.2rem; color: rgba(255,255,255,0.9); }
+        .mst-list i { color: var(--neon-blue); font-size: 1.4rem; background: rgba(0, 243, 255, 0.1); width: 35px; height: 35px; display: flex; align-items: center; justify-content: center; border-radius: 50%; }
+
+        .result-box-mst {
+            background: rgba(0, 243, 255, 0.02); border-left: 4px solid var(--neon-blue);
+            padding: 25px; margin-bottom: 20px; border-radius: 0 15px 15px 0; transition: 0.3s;
+        }
+        .result-box-mst:hover { background: rgba(0, 243, 255, 0.06); padding-left: 35px; }
+
+        /* --- RESULTS SECTION --- */
+        .stats-section { padding: 100px 0; text-align: center; }
+        .stat-card {
+            background: rgba(255,255,255,0.02);
+            border: 1px solid var(--glass-border);
+            border-radius: 20px;
+            padding: 60px 20px;
+            transition: 0.3s;
+        }
+        .stat-card:hover { border-color: var(--neon-blue); background: rgba(0, 243, 255, 0.05); transform: scale(1.03); }
+        .stat-card h2 { font-size: 4rem; font-weight: 800; margin-bottom: 10px; }
+
+        footer { padding: 40px 0; opacity: 0.5; border-top: 1px solid var(--glass-border); }
