@@ -32,6 +32,7 @@ import BusinessWebsiteKanpur from './pages/blog/BusinessWebsiteKanpur';
 import ReelsEngagementGuide from './pages/blog/ReelsEngagementGuide';
 import RankOnGoogleTips from './pages/blog/RankOnGoogleTips';
 import BrandingVsMarketing from './pages/blog/BrandingVsMarketing';
+import KanpurInvisibleGoogle from './pages/blog/KanpurInvisibleGoogle';
 
 import CaseStudyPage from './pages/case-studies/CaseStudyPage';
 
@@ -84,6 +85,7 @@ function Layout() {
         <Route path="/blog/reels-engagement-guide" element={<ReelsEngagementGuide />} />
         <Route path="/blog/rank-on-google-tips" element={<RankOnGoogleTips />} />
         <Route path="/blog/branding-vs-marketing" element={<BrandingVsMarketing />} />
+        <Route path="/blog/kanpur-invisible-google" element={<KanpurInvisibleGoogle />} />
 
         {/* Case Studies */}
         <Route path="/case-studies/:slug" element={<CaseStudyPage />} />

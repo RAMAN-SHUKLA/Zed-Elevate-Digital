@@ -10,10 +10,7 @@ export default function Footer() {
             <p className="small opacity-50 text-start">
               Zed Elevate Digital is a leading <strong>online marketing agency in Kanpur</strong>. We offer premium digital marketing services in Kanpur, Uttar Pradesh, to elevate your brand globally.
             </p>
-            <div className="mt-4 p-3 rounded-3" style={{ background: 'rgba(0, 243, 255, 0.05)', border: '1px solid rgba(0, 243, 255, 0.1)' }}>
-              <h6 className="neon-text small fw-bold mb-2"><i className="bi bi-lightbulb me-2"></i>BONUS SEO TIP</h6>
-              <p className="small mb-0 opacity-75">Optimize your Google Business Profile with local Kanpur keywords for 3x more visibility in local searches.</p>
-            </div>
+
           </div>
           <div className="col-lg-2">
             <h5 className="mb-4 text-start">Quick Links</h5>

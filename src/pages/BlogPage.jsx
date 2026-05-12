@@ -26,6 +26,32 @@ export default function BlogPage() {
       <section className="section-padding">
         <div className="container">
           <div className="row g-4">
+            {/* Featured Post */}
+            <div className="col-12" data-aos="fade-up">
+              <div className="glass-card" style={{ background: 'linear-gradient(135deg, rgba(0,243,255,0.08), rgba(0,80,255,0.06))', border: '1px solid rgba(0,243,255,0.25)' }}>
+                <div className="row g-4 align-items-center">
+                  <div className="col-lg-6">
+                    <img src="https://images.unsplash.com/photo-1562577309-4932fdd64cd1?auto=format&fit=crop&w=800" className="img-fluid rounded-3 border border-info" alt="Kanpur SEO Google Ranking" />
+                  </div>
+                  <div className="col-lg-6">
+                    <div className="mb-3">
+                      <span className="badge bg-info text-dark">FEATURED</span>{' '}
+                      <span className="badge" style={{ background: 'rgba(0,243,255,0.15)', color: '#00f3ff', border: '1px solid rgba(0,243,255,0.3)' }}>LOCAL SEO</span>{' '}
+                      <span className="small opacity-50 ms-2">May 12, 2026</span>
+                    </div>
+                    <h3 className="fw-bold mb-3">Why Kanpur Businesses Are Still Invisible on Google — And How to Fix It in 30 Days</h3>
+                    <p className="opacity-75 mb-4">73% of Kanpur consumers search Google before visiting any local store, clinic, or service provider. We audited 40+ Kanpur businesses and found the same 7 mistakes over and over. Every single one is fixable.</p>
+                    <div className="d-flex flex-wrap gap-2 mb-4">
+                      {['Google Business Profile', 'Local SEO', 'Website Speed', '12 min read'].map((tag, i) => (
+                        <span key={i} className="badge" style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.12)', fontSize: '0.75rem' }}>{tag}</span>
+                      ))}
+                    </div>
+                    <Link to="/blog/kanpur-invisible-google" className="btn-neon" style={{ fontSize: '0.85rem' }}>READ FULL ARTICLE →</Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             {posts.map((p, i) => (
               <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay={i * 100} key={i}>
                 <div className="glass-card h-100">
