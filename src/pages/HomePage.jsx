@@ -9,7 +9,7 @@ export default function HomePage() {
       {/* Hero */}
       <section id="home" className="hero">
         <div className="container" data-aos="zoom-in">
-          <h1 className="display-3 fw-bold mb-4">Grow Faster. <br />Rank Higher. <br /><span className="neon-text">Convert Better.</span></h1>
+          <h1 className="display-3 fw-bold mb-4">Grow Faster, Rank Higher<br /><span className="neon-text">Convert Better.</span></h1>
           <p className="lead mb-5 opacity-75 mx-auto" style={{ maxWidth: '800px' }}>
             At Zed Elevate Digital, we help businesses in Kanpur and across India dominate search rankings, attract quality leads, and turn digital traffic into real revenue. From laser-focused SEO to high-converting ad campaigns — we build strategies that actually work.
           </p>

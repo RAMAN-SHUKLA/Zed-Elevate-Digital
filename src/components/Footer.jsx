@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="container">
         <div className="row g-4 mb-5">
           <div className="col-lg-4">
-            <img src="/LOGO.png" alt="Logo" height="50" className="mb-4" />
+            <img src="/LOGO.png" alt="Logo" height="60" className="mb-4" />
             <p className="small opacity-50 text-start">
               Zed Elevate Digital is a leading <strong>online marketing agency in Kanpur</strong>. We offer premium digital marketing services in Kanpur, Uttar Pradesh, to elevate your brand globally.
             </p>
