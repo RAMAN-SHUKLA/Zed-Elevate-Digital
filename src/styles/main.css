@@ -12,7 +12,7 @@
     --card-gradient: linear-gradient(135deg, rgba(0, 243, 255, 0.08) 0%, rgba(10, 15, 25, 0.9) 100%);
     
     /* Scult-style variables */
-    --nav-height: 80px;
+    --nav-height: 120px;
     --pill-radius: 50px;
     --bg-color: var(--ghost-dark);
     --text-color: var(--white);
@@ -136,7 +136,7 @@ p {
 }
 
 .navbar-brand img { 
-    height: 65px;
+    height: 150px;
     width: auto;
     max-width: none;
     object-fit: contain;
