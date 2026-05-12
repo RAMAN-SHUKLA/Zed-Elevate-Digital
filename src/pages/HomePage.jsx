@@ -231,6 +231,65 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Pricing */}
+      <section id="pricing" className="pricing-section">
+        <div className="pricing-bg-hero"></div>
+        <div className="container">
+          <div className="text-center mb-5" data-aos="fade-up">
+            <span className="badge bg-info text-dark mb-3">TRANSPARENT PRICING</span>
+            <h2 className="display-4 fw-bold">Plans Tailored for <span className="neon-text">Growth</span></h2>
+            <p className="text-white-50 mx-auto" style={{ maxWidth: '600px' }}>Choose the perfect plan to elevate your digital presence and start dominating your market.</p>
+          </div>
+          <div className="row g-4 justify-content-center">
+            {[
+              {
+                title: 'BASIC PLAN',
+                price: '3,999',
+                features: ['10 Social Media Posts (Graphics)', '12 Reels / Short Videos', 'Basic Caption Writing', 'Hashtag Research', 'Basic Page Management'],
+                popular: false,
+                btnText: 'GET STARTED',
+                subtitle: 'Best for small businesses starting online'
+              },
+              {
+                title: 'PREMIUM PLAN',
+                price: '6,999',
+                features: ['15 Social Media Posts', '12 Reels / High Quality Videos', 'Advanced Video Editing', 'Content Strategy + Planning', 'Branding Support', 'Priority Support', 'Meta Ads Management'],
+                popular: true,
+                btnText: 'MOST POPULAR',
+                subtitle: 'Best for brands who want fast growth 🚀'
+              },
+              {
+                title: 'CUSTOM PLAN',
+                price: 'CUSTOM',
+                features: ['Everything in Premium', 'Personal Brand Strategy', 'Influencer Marketing', 'E-commerce Automation', 'High-End Video Production', 'Dedicated Growth Team'],
+                popular: false,
+                btnText: 'CONTACT US',
+                subtitle: 'Tailored solutions for large scale dominance'
+              }
+            ].map((plan, i) => (
+              <div className="col-lg-4 col-md-6" key={i} data-aos="fade-up" data-aos-delay={i * 100}>
+                <div className={`pricing-card ${plan.popular ? 'popular' : ''}`}>
+                  {plan.popular && <div className="popular-tag">MOST POPULAR</div>}
+                  <h3 className="fw-bold mb-3">{plan.title}</h3>
+                  <div className="price-amount">
+                    {plan.price !== 'CUSTOM' && <span style={{ fontSize: '1.5rem', verticalAlign: 'super' }}>₹</span>}
+                    {plan.price}
+                    {plan.price !== 'CUSTOM' && <span className="price-period">/mo</span>}
+                  </div>
+                  <p className="small opacity-75 mb-4" style={{ minHeight: '40px' }}>{plan.subtitle}</p>
+                  <ul className="pricing-features">
+                    {plan.features.map((feature, idx) => (
+                      <li key={idx}><i className="bi bi-check2-circle"></i> {feature}</li>
+                    ))}
+                  </ul>
+                  <a href="#contact" className="btn-pricing">{plan.btnText}</a>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Process */}
       <section className="section-padding">
         <div className="container">

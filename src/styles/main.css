@@ -14,6 +14,8 @@
     /* Scult-style variables */
     --nav-height: 80px;
     --pill-radius: 50px;
+    --bg-color: var(--ghost-dark);
+    --text-color: var(--white);
 }
 
 [data-theme="light"] {
@@ -529,9 +531,9 @@ p {
 .pricing-section {
     position: relative;
     overflow: hidden;
-    background-color: var(--bg-color);
+    background-color: var(--bg-main);
     padding: 100px 24px;
-    color: var(--text-color);
+    color: var(--text-main);
 }
 
 .pricing-bg-hero {

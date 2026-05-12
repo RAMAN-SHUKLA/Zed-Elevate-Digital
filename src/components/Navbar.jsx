@@ -51,7 +51,7 @@ export default function Navbar() {
               <a className="nav-link" href="/#testimonials">Testimonials</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/#pricing">Pricing</a>
+              <NavLink className="nav-link" to="/pricing">Pricing</NavLink>
             </li>
             <li className="nav-item">
               <a href="https://calendly.com/zedelevatedigital/30min" className="nav-btn-pill btn-book-meeting">Book a Meeting</a>

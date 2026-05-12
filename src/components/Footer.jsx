@@ -20,6 +20,7 @@ export default function Footer() {
               <li><a href="/#services">Services</a></li>
               <li><Link to="/projects">Projects</Link></li>
               <li><Link to="/blog">Blog</Link></li>
+              <li><Link to="/pricing">Pricing</Link></li>
             </ul>
           </div>
           <div className="col-lg-3">

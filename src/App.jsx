@@ -8,6 +8,7 @@ import HomePage from './pages/HomePage';
 import AboutPage from './pages/AboutPage';
 import BlogPage from './pages/BlogPage';
 import ProjectsPage from './pages/ProjectsPage';
+import PricingPage from './pages/PricingPage';
 
 import SocialMediaPage from './pages/services/SocialMediaPage';
 import DesigningPage from './pages/services/DesigningPage';
@@ -59,6 +60,7 @@ function Layout() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/blog" element={<BlogPage />} />
         <Route path="/projects" element={<ProjectsPage />} />
+        <Route path="/pricing" element={<PricingPage />} />
 
         {/* Services */}
         <Route path="/services/social-media" element={<SocialMediaPage />} />
