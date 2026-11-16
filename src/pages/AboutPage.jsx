@@ -85,28 +85,20 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Founders */}
+      {/* Founder */}
       <section className="section-padding bg-black bg-opacity-25">
         <div className="container">
           <div className="text-center mb-5" data-aos="fade-up">
-            <h2 className="display-4 fw-bold">Founded in <span className="neon-text">Partnership</span></h2>
-            <p className="opacity-50">The creative minds behind your brand's success.</p>
+            <h2 className="display-4 fw-bold">Meet the <span className="neon-text">Founder</span></h2>
+            <p className="opacity-50">The creative mind behind your brand's success.</p>
           </div>
-          <div className="row g-4 justify-content-center">
-            <div className="col-lg-5 col-md-6" data-aos="zoom-in">
-              <div className="glass-card text-center h-100">
+          <div className="row justify-content-center">
+            <div className="col-lg-6 col-md-8" data-aos="zoom-in">
+              <div className="glass-card text-center h-100 p-4 p-md-5">
                 <img src="/riyadidi_img.png" className="rounded-circle mb-4 border border-info p-2 d-block mx-auto" style={{ width: '150px', height: '150px', objectFit: 'cover' }} alt="Riya Saxena" />
                 <h4>Riya Saxena</h4>
-                <p className="neon-text small">Founder</p>
-                <p className="small opacity-75">Specialized in building lean, professional systems that bridge the gap between creative vision and measurable ROI. Passionate about helping brands establish a dominant and sophisticated presence in a crowded digital landscape</p>
-              </div>
-            </div>
-            <div className="col-lg-5 col-md-6" data-aos="zoom-in" data-aos-delay="100">
-              <div className="glass-card text-center h-100">
-                <img src="/zuhaib.jpeg" className="rounded-circle mb-4 border border-info p-2 d-block mx-auto" style={{ width: '150px', height: '150px', objectFit: 'cover' }} alt="Zuhaib Amir Ansari" />
-                <h4>Zuhaib Amir Ansari</h4>
-                <p className="neon-text small">Founder</p>
-                <p className="small opacity-75">Founder and Digital Strategist focused on building high-impact brand identities. I combine minimalist design principles with aggressive growth strategies to help modern agencies scale with precision and professional authority.</p>
+                <p className="neon-text small fw-bold">Founder - Zed Elevate Digital</p>
+                <p className="small opacity-75 mb-0">Specialized in building lean, professional systems that bridge the gap between creative vision and measurable ROI. Passionate about helping brands establish a dominant and sophisticated presence in a crowded digital landscape.</p>
               </div>
             </div>
           </div>
